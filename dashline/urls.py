@@ -13,5 +13,5 @@ urlpatterns = patterns('',
         
     (r'^profiles/', include('profiles.urls')),
     (r'^accounts/', include('registration.backends.default.urls')),
-    #(r'^timeline/', include('timeline.urls')),
+    (r'^timeline/', include('timeline.urls')),
 )
