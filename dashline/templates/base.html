@@ -4,13 +4,10 @@
 
 <head class="html5reset-kitchensink-commented">
 
-	<meta charset="utf-8" />
-	
+	<meta charset="utf-8" />	
 	<title>Dashline {% block title %}{% endblock %}</title>
 	
 	<meta name="description" content="Dashline - Your events, your time.">
-	<!-- Google will often use this as its description of your page/site. Make it good. -->
-	
     <meta name="author" content="Felipe Rafael Prenholato (chronossc) <philipe.rp@gmail.com>" />
     <meta name="author" content="Diógenes A. Fernandes Hermínio (diofeher) <diofeher@gmail.com>" />
     <meta name="author" content="Henrique Pereira (ikkebr) <ikkibr@gmail.com>" />
@@ -19,10 +16,7 @@
 	<meta name="DC.title" content="Dashline" />
 	<meta name="DC.subject" content="What you're about." />
 	<meta name="DC.creator" content="Dashline team." />
-	
-	<meta name="google-site-verification" content="" />
-	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
-	
+		
 	<link rel="shortcut icon" href="{{ MEDIA_URL }}img/favicon.png"/>
 	<!-- This is the traditional favicon.
 		 - size: 16x16 or 32x32
@@ -36,13 +30,7 @@
 		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
 
 	<link rel="stylesheet" href="{{ MEDIA_URL }}html5/css/main.css" media="all" />
-	<!-- main.css is a gateway file. You will spend your time in core.css -->
-	
 	<link rel="stylesheet" href="{{ MEDIA_URL }}html5/css/_print/main.css" media="print" />
-	
-	<!-- These are IE-specific conditional style sheets. 
-		 You might consider removing the ones you don't end up using. -->
-		 
 	<!--[if IE]>
 	<link rel="stylesheet" href="{{ MEDIA_URL }}html5/css/screen/patches/win-ie-all.css" media="all" />
 	<![endif]-->
@@ -53,8 +41,6 @@
 	<link rel="stylesheet" href="{{ MEDIA_URL }}html5/css/screen/patches/win-ie-old.css" media="all" />
 	<![endif]-->
 	
-	<!-- The following is STRONGLY OPTIONAL, but useful if you really need to kick IE in the pants.
-		 There are different flavors; pick the one right for your project: http://code.google.com/p/ie7-js/ -->
 	<!--[if lt IE 8]>
 	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
 	<![endif]-->
@@ -62,55 +48,44 @@
 	<!-- jQuery -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<script src="{{ MEDIA_URL }}js/functions.js"></script>
+		<script src="{{ MEDIA_URL}}html5/js/modernizr-1.5.min.js"></script>
 	
-	<!-- Either Modernizr OR the HTML5 Shiv script is required if you want IE compatability, AND you want to use the new, 
-		 more-semantic HTML5 elements (header, article, footer, etc) 
-		 - we've only included Modernizr; HTML5 Shiv can be found here: http://html5shiv.googlecode.com -->
-	
-	<!-- MODERNIZR: http://www.modernizr.com/
-	    If you're using this, you don't need the HTML5 Shiv script below -->
-	<script src="{{ MEDIA_URL}}html5/js/modernizr-1.5.min.js"></script>
-	
-	<!-- don't forget Google Analytics -->
-
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/base.css" type="text/css" media="screen" />
     {% block extracss %}{% endblock %}
-
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
     {% block extrajs %}{% endblock %}
-
     {% block extrahead %}{% endblock %}
-
-
 </head>
 
-<body id="dashline.chronosbox.org">
+<body id="DashLine">
 
-<section>
+<div class='section' id='page'>
 	<header>
 		
-		<h1><a href="/">Dashline home</a></h1>
+		<div>
+			<h1>Dashline</h1>
+			<h3>and we need a slogan</h3>
+        </div>
+		<nav class='nav clear'>        
+						<ul>
+							<li id="home"><a href='{# url home #}'><b>Home</b></a></li>
+							
+							{% if not user.is_authenticated %}
+								<li id="login"><a href="{#% url django.contrib.auth.views.login %#}"><b>Login</b></a></li>
+								<li id="register"><a href="{#% url registration_register %#}"><b>Register</b></a></li>
+							{% else %}
+								<li id="edit_profile"><a href="{#% url profiles_edit_profile %#}"><b>Edit profile</b></a></li>
+								<li id="logout"><a href="{#% url django.contrib.auth.views.logout %#}"><b>Logout</b></a></li>
+							{% endif %}		
+						
+							<li id="browse"><a href="{# url browser #}"><b>Browse</b></a></li>
+							<li id="create"><a href="{# url create #}"><b>Create</b></a></li>
+							<li id="about"><a href="{# url about #}"><b>About </b></a></li>
+							<li id="contact"><a href="{# url contact #}"><b>Contact</b></a></li>
+						</ul>
+		</nav>				
 		
-		<nav>		
-			<ul id="menu">
-				<li id="home"><a href='{# url home #}'><b>Home</b></a></li>
-				
-			    {% if not user.is_authenticated %}
-				    <li id="login"><a href="{#% url django.contrib.auth.views.login %#}"><b>Login</b></a></li>
-				    <li id="register"><a href="{#% url registration_register %#}"><b>Register</b></a></li>
-				{% else %}
-				    <li id="edit_profile"><a href="{#% url profiles_edit_profile %#}"><b>Edit profile</b></a></li>
-				    <li id="logout"><a href="{#% url django.contrib.auth.views.logout %#}"><b>Logout</b></a></li>
-				{% endif %}		
-			
-				<li id="browse"><a href="{# url browser #}"><b>Browse Timelines</b></a></li>
-				<li id="create"><a href="{# url create #}"><b>Create</b></a></li>
-				<li id="about"><a href="{# url about #}"><b>About </b></a></li>
-				<li id="contact"><a href="{# url contact #}"><b>Contact us</b></a></li>
-			</ul>
-		</nav>
-
 	</header>
     
     <p>Comming soon ;)<p>
@@ -149,11 +124,11 @@
 	</aside>
 	<footer>
 		
-		<p><small>&copy; Copyright Dashline Team 2010. All Rights Reserved.</small></p>
+		<p><small>&copy; Copyright Dashline Team 2010. All Rights Reserved. This website is Pony Powered.</small></p>
 		
 	</footer>
     
-</section>
+</div>
 
 </body>
 <html>
