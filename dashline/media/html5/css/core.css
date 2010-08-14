@@ -272,3 +272,23 @@ p{
 .footer a.up{
 	float:right;
 }
+
+.form {
+	width: 800px;
+}
+
+.form label {
+	text-decoration: none;
+	font-size:1.25em;
+	font-weight:bold;
+	color: #0f0f0f;
+}
+
+.form input {
+	background-color: #24404c;
+}
+
+.form p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
