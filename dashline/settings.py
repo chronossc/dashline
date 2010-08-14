@@ -105,6 +105,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     #external
     'registration',
+    'profiles',
 )
 
 ACCOUNT_ACTIVATION_DAYS = 7 
