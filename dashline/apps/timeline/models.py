@@ -47,7 +47,7 @@ class Entry(models.Model):
     when = models.DateTimeField(_("Entry date"),)
     #icon = models.TextField() #TODO implement
     entry_type = models.CharField(_("Entry type"), choices=TYPE_CHOICES, max_length=10)
-    description = models.CharField(_("Entry description"), max_lenght=255)
+    description = models.CharField(_("Entry description"), max_length=255)
     entry_content = models.TextField(_("Entry content"), )
     default_ordering = models.CharField(_("Default ordering"), choices=ORDERING_CHOICES, max_length=2)
     
