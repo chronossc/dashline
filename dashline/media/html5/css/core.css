@@ -127,14 +127,14 @@ p{
 	overflow:hidden;
 }
 
-div.article .line{
+.article .line{
 	/* The dividing line inside of the article is darker: */
 	background-color:#15242a;
 	border-bottom-color:#204656;
 	margin:1.3em 0;
 }
 
-div.footer .line{
+.footer .line{
 	margin:2em 0;
 }
 
