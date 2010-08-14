@@ -61,7 +61,7 @@ def add_entries(request, slug):
             if formset.is_valid():
                 formset.save()
                 #TODO mandar msg pro usuario
-                return HttpResponseRedirect(reverse('show', args=[timeline.slug]))
+                return HttpResponseRedirect(reverse('timeline_show', args=[timeline.slug]))
         
     #if it's a fresh form
     else:
