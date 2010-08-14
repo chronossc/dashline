@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block Title %}Add entries to your timeline{% endblock %}
+
+{% block content %}
+		<h2>Add entries to your timeline</h2>
+		
+		<p>Fill this form to create a new timeline.</p>
+		
+		{% if form.errors %}
+			{{ form. errors }}
+		{% endif %}
+		
+		<form method='post' action='{{request.path}}'>
+		  <fieldset>
+			<legend>Event entry</legend>
+			{{ timeline.management_form }}
+			{% for form in timeline.forms %}
+			  <div>{{form.as_p}}</div>
+			{% endfor %}
+			<input title='Add a new entry to the timeline'
+			  type='submit' name='add_entry' value='Add' />
+		  </fieldset>
+		  
+		  <input title='Submit this form'
+			  type='submit' name='submit' value='Submit' />
+		</form>
+
+
+{% endblock %}

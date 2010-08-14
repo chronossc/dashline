@@ -1,8 +1,12 @@
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response, get_object_or_404, HttpResponseRedirect
 from django.template import RequestContext
 from models import TimeLine, Entry
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
+from django.core.urlresolvers import reverse
+
+
+from forms import TimeLineForm
 
 def show_timeline(request, slug):
     """ View that returns a timeline or a 404 error if the timeline cannot be found """
@@ -24,8 +28,48 @@ def post_entry(request):
 @login_required
 def create_timeline(request):
     """ Creates a timeline. """
-    #TODO
-    pass
+    form = TimeLineForm()
+    
+    if request.method == 'POST':
+        form = TimeLineForm(request.POST)
+        
+        if form.is_valid():
+            form.owner = request.user            
+            curr = form.save()
+            
+            return HttpResponseRedirect(reverse('add_entries', args=[curr.slug]))
+                                        
+    return render_to_response('timeline/create.html', {'form': form}, context_instance=RequestContext(request))
+
+@login_required
+def add_entries(request, slug):
+    """ First way to add entries do a timeline """
+    timeline = get_object_or_404(TimeLine, slug=slug, owner=request.user)
+    
+    AddEntryFormset = inlineformset_factory(TimeLine,Entry,extra=0)
+
+    # if this form has been submitted..
+    if request.method=='POST':
+        if 'add_entry' in request.POST:
+            cp = request.POST.copy()
+            cp['timeline-TOTAL_FORMS'] = int(cp['timeline-TOTAL_FORMS'])+ 1
+            new_entry = AddEntryFormset(cp,prefix='timeline',instance=timeline)
+        elif 'submit' in request.POST:
+            formset = AddEntryFormset(request.POST, instance=timeline)
+            
+            if formset.is_valid():
+                formset.save()
+                #TODO mandar msg pro usuario
+                
+                return HttpResponseRedirect(reverse('show', args=[timeline.slug]))
+        
+    #if it's a fresh form
+    else:
+        new_entry = AddEntryFormset(prefix='timeline',instance=timeline)
+    
+    # return the rendered template
+    return render_to_response('timeline/add_entry.html', {'timeline':new_entry},context_instance=RequestContext(request))
+    
 
 def get_hottest(request):
     """ Returns the most viewed/commented timelines """
