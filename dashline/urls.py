@@ -13,4 +13,6 @@ urlpatterns = patterns('',
 
     (r'^accounts/', include('registration.backends.default.urls')),
     (r'^profiles/', include('profiles.urls')),
+    
+    #(r'^timeline/', include('timeline.urls')),
 )
