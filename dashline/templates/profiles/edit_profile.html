@@ -3,7 +3,7 @@
  
 {% block content %}
 <h1>Edit your Profile</h1>
- 
+<p>if you want to put your photo, go to <a href="http://www.gravatar.com" target="new">gravatar</a> and sign up an account with the same e-mail you registered here.</p>
 <form method="POST" action="">{% csrf_token %}
     {{ form.as_p }}
     <p><input type="submit" name="submit" value="Update" id="submit"></p>
