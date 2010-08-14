@@ -6,5 +6,5 @@ urlpatterns = patterns('',
     url(r'^show/(?P<slug>\S+)$','timeline.views.show_timeline', name='show'),
     url(r'^create/$','timeline.views.create_timeline', name='create'),
     url(r'^browser/$','timeline.views.browse_timelines', name='browse'),
-    
+    url(r'^add_entries/(?P<slug>\S+)$','timeline.views.browse_timelines', name='add_entries'),
 )
