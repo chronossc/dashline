@@ -274,9 +274,10 @@ p{
 }
 
 .form {
-	margin-top: 15px;
-	padding-left: 10px;
-	width: 800px;
+	margin-top: 25px;
+	padding-left: 15px;
+	width: 500px;
+	text-align: right;
 }
 
 .form label {
@@ -287,12 +288,11 @@ p{
 }
 
 .form input {
-	background-color: #24404c;
-	width: 300px;
+	background-color: #0c244c;
+	width: 400px;
 }
 
 .form p {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	text-align: right;
 }
