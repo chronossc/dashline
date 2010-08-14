@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render_to_response, get_object_or_404, HttpResponseRedirect
 from django.template import RequestContext
 from models import TimeLine, Entry
@@ -61,7 +62,7 @@ def add_entries(request, slug):
             formset = AddEntryFormset(request.POST, instance=timeline)
             if formset.is_valid():
                 formset.save()
-                #TODO mandar msg pro usuario
+                messages.add_message(request, messages.SUCCESS, 'Timeline created successfuly.')
                 return HttpResponseRedirect(reverse('timeline_show', args=[timeline.slug]))
         
     #if it's a fresh form
