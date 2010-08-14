@@ -1,6 +1,5 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
-from users.forms import ProfileForm
 
 from django.contrib import admin
 admin.autodiscover()
