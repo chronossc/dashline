@@ -88,6 +88,7 @@ a img{
 h1,h2,h3{
 	font-family:"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
 	text-shadow:0 1px 1px black;
+	margin-bottom: 10px;
 }
 
 h1{
@@ -273,7 +274,7 @@ p{
 	float:right;
 }
 
-.form {
+.article form {
 	margin-top: 25px;
 	padding-left: 15px;
 	width: 500px;
