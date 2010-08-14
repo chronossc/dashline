@@ -5,7 +5,7 @@
 {% block content %}
 
 	<h2>{{ timeline.title }}</h2>
-	<h3>by <a href='#TODO'>{{ timeline.owner }}, created {{ timeline.date_created|date:'d/m/Y' }}</a></h3>
+	<h3>by <a href='#TODO'>{{ timeline.owner }}</a>, created {{ timeline.date_created|date:'d/m/Y' }}</h3>
 	<p>{{ timeline.description|linebreaksbr }}</p>
 	
 	<ul>
