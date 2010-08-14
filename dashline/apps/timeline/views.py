@@ -37,7 +37,8 @@ def get_lastest(request):
     timelines = TimeLine.objects.filter().order_by(['-id'])[:15]
     return render_to_response('timeline/lastest.html', {'timelines': timelines}, context_instance=RequestContext(request))
 
-def browse_timelines(request):        
+def browse_timelines(request):
+    timeline = TimeLine.objects.all()
     paginator = Paginator(timeline, 15) # Show 15 contacts per page
 
     try:
