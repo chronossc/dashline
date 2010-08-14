@@ -1,2 +1,169 @@
+<!DOCTYPE HTML>
 <html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Dashline</title>
+        <meta name="authors" content="Felipe Rafael Prenholato (chronossc) <philipe.rp@gmail.com>">
+        <meta name="authors" content="Diógenes A. Fernandes Hermínio (diofeher) <diofeher@gmail.com>">
+        <meta name="authors" content="Henrique Pereira (ikkebr) <ikkibr@gmail.com>">
+
+
+    </head>
+    <html>
+
+    </html>
 </html>
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}" class="no-js">
+<!-- the "no-js" class is for Modernizr. -->
+
+<head class="html5reset-kitchensink-commented">
+
+	<meta charset="utf-8" />
+	
+	<title>Dashline</title>
+	
+	<meta name="description" content="Dashline project description." />
+	<!-- Google will often use this as its description of your page/site. Make it good. -->
+	
+	<meta name="author" content="Your Name Here" />
+    <meta name="author" content="Felipe Rafael Prenholato (chronossc) <philipe.rp@gmail.com>" />
+    <meta name="author" content="Diógenes A. Fernandes Hermínio (diofeher) <diofeher@gmail.com>" />
+    <meta name="author" content="Henrique Pereira (ikkebr) <ikkibr@gmail.com>" />
+	<meta name="Copyright" content="Copyright Dashline Team 2010. All Rights Reserved." />
+
+	<meta name="DC.title" content="Dashline" />
+	<meta name="DC.subject" content="What you're about." />
+	<meta name="DC.creator" content="Dashline team." />
+	
+	<meta name="google-site-verification" content="" />
+	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
+	
+	<link rel="shortcut icon" href="{{ MEDIA_URL }}img/favicon.png"/>
+	<!-- This is the traditional favicon.
+		 - size: 16x16 or 32x32
+		 - transparency is OK
+		 - see wikipedia for info on broswer support: http://mky.be/favicon/ -->
+	
+	<link rel="apple-touch-icon" href="{{ MEDIA_URL}}img/custom_icon.png"/>
+	<!-- The is the icon for iOS's Web Clip.
+		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
+		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
+		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
+
+	<link rel="stylesheet" href="{{ MEDIA_URL }}html5/css/main.css" media="all" />
+	<!-- main.css is a gateway file. You will spend your time in core.css -->
+	
+	<link rel="stylesheet" href="{{ MEDIA_URL }}html5/css/_print/main.css" media="print" />
+	
+	<!-- These are IE-specific conditional style sheets. 
+		 You might consider removing the ones you don't end up using. -->
+		 
+	<!--[if IE]>
+	<link rel="stylesheet" href="{{ MEDIA_URL }}html5/css/screen/patches/win-ie-all.css" media="all" />
+	<![endif]-->
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="{{ MEDIA_URL }}html5/css/screen/patches/win-ie7.css" media="all" />
+	<![endif]-->
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" href="{{ MEDIA_URL }}html5/css/screen/patches/win-ie-old.css" media="all" />
+	<![endif]-->
+	
+	<!-- The following is STRONGLY OPTIONAL, but useful if you really need to kick IE in the pants.
+		 There are different flavors; pick the one right for your project: http://code.google.com/p/ie7-js/ -->
+	<!--[if lt IE 8]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+	<![endif]-->
+	
+	<!-- jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="{{ MEDIA_URL }}js/functions.js"></script>
+	
+	<!-- Either Modernizr OR the HTML5 Shiv script is required if you want IE compatability, AND you want to use the new, 
+		 more-semantic HTML5 elements (header, article, footer, etc) 
+		 - we've only included Modernizr; HTML5 Shiv can be found here: http://html5shiv.googlecode.com -->
+	
+	<!-- MODERNIZR: http://www.modernizr.com/
+	    If you're using this, you don't need the HTML5 Shiv script below -->
+	<script src="{{ MEDIA_URL}}html5/js/modernizr-1.5.min.js"></script>
+	
+	<!-- don't forget Google Analytics -->
+
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/base.css" type="text/css" media="screen" />
+    {% block extracss %}{% endblock %}
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+    {% block extrajs %}{% endblock %}
+
+    {% block extrahead %}{% endblock %}
+
+
+</head>
+
+<body id="dashline.chronosbox.org">
+
+<section>
+
+	<header>
+		
+		<h1><a href="/">Dashline home</a></h1>
+	    {% comment %}
+		<nav>
+		
+			<ol>
+				<li><a href="">Nav Link 1</a></li>
+				<li><a href="">Nav Link 2</a></li>
+				<li><a href="">Nav Link 3</a></li>
+			</ol>
+		
+		</nav>
+	    {% endcomment %}
+	</header>
+    
+    <p>Comming soon ;)<p>
+
+    {{ MEDIA_URL }}
+	{% comment %}
+	<article>
+		
+		<!-- HTML5 allows you to reset the header count with each new 
+			 piece of sectioning content, if you so choose. -->
+		<h1>Article Header 1</h1>
+		
+		<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
+		
+		<h2>Article Subhead</h2>
+		
+		<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
+	
+	</article>
+	
+	<article>
+	
+		<h1>Article Header 2</h1>
+		
+		<p>Praesent adipiscing nibh eget mauris gravida ullamcorper tempor enim elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		
+		<h2>Article Subhead</h2>
+		
+		<p>Cras tincidunt, justo non viverra laoreet, purus nunc luctus metus, eget porta augue odio at massa. Nunc nisl orci.</p>
+	
+	</article>
+
+	<aside>
+	
+		<h2>Sidebar Content</h2>
+	
+	</aside>
+    {% endcomment %}	
+	<footer>
+		
+		<p><small>&copy; Copyright Dashline Team 2010. All Rights Reserved.</small></p>
+		
+	</footer>
+
+</section>
+
+</body>
+<html>
