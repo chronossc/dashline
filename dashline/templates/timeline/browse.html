@@ -5,6 +5,8 @@
 {% block title %}Browse Timelines{% endblock %}
 
 {% block content %}
+    <h1>Browse Timelines</h1>
+    
     <ul>
     {% autopaginate timelines 4 %}
 	{% for timeline in timelines %}
