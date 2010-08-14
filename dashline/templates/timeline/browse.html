@@ -3,9 +3,11 @@
 {% block title %}Browse Timelines{% endblock %}
 
 {% block content %}
+    <ul>
 	{% for timeline in timelines.object_list %}
-		Faz algo com a timeline<br/>
+		<li>{{ timeline }}</li>
 	{% endfor %}
+	</ul>
 
 <div class="pagination">
     <span class="step-links">
