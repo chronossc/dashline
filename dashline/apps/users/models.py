@@ -19,7 +19,7 @@ class UserProfile(models.Model):
     def avatar(self):
         size = 48
         email = self.user.email
-        default = "http://api.ning.com/files/L-2Mry07IJ3j5NpZFDRiGd2muhP-KJTK*tZ47YoxU2Z2vxpOlFQ4Coi032VORAdYcgx1GXmpfhKedtS9I0gpSoTvg61lWXpX/your_8bit_avatar2.jpg?width=48&height=48&crop=1%3A1"
+        default = "http://www.wprecipes.com/wp-content/uploads/2009/01/gravatar1.jpg"
         url = "http://www.gravatar.com/avatar.php?%s" % urllib.urlencode({
                                                                         'gravatar_id': hashlib.md5(email).hexdigest(), 
                                                                         'default': default, 
