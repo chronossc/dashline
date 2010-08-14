@@ -57,3 +57,48 @@ body {
 abbr {
 	cursor: help;
 }
+
+/*- Menu
+#pad {height:100px;}
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssmenus.co.uk
+Copyright (c) 2009- Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== */
+#menu {padding:0 0 0 30px; margin:0 0 0 300px; list-style:none; width:670px; height:60px; background:url(../../img/background.png)}
+* html #menu {
+margin:0;
+background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../img/background.png', sizingMethod='scale');
+}
+
+#menu li {position:relative; float:left; margin:0;}
+#menu li a {display:block; height:36px; line-height:35px; padding:0 20px 0 0; float:left; color:#333; text-decoration:none; font-family:arial, sans-serif; font-size:11px; background:url(../../img/divide.png) no-repeat right top;}
+#menu li a b {display:block; height:36px; float:left; padding:0 0 0 20px;}
+
+#menu li a:hover, 
+#menu li a:active,
+#menu li a:focus,
+.home #menu li#home a,
+.single #menu li#single a,
+.dropdown #menu li#dropdown a,
+.dropline #menu li#dropline a,
+.flyout #menu li#flyout a,
+.support #menu li#support a,
+.contact #menu li#contact a
+{background:#999 url(../../img/divide2.png) no-repeat right top; cursor:pointer; color:#fff; line-height:35px;}
+#menu li a:hover b,
+#menu li a:active b,
+#menu li a:focus b,
+.home #menu li#home a b,
+.single #menu li#single a b,
+.dropdown #menu li#dropdown a b,
+.dropline #menu li#dropline a b,
+.flyout #menu li#flyout a b,
+.support #menu li#support a b,
+.contact #menu li#contact a b
+{ background:#999; cursor:pointer;}
