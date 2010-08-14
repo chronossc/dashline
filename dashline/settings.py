@@ -112,6 +112,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.admin',
+    #locals
+    'users',
     #external
     'registration',
     'profiles',
@@ -119,7 +121,7 @@ INSTALLED_APPS = (
 
 ACCOUNT_ACTIVATION_DAYS = 7
 
-AUTH_PROFILE_MODEL = 'apps.users.Profile'
+AUTH_PROFILE_MODULE = 'users.UserProfile'
 
 try:
     execfile(os.path.join(PROJECT_DIR, 'settings_local.py'), globals(), locals())
