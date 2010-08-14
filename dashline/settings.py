@@ -114,6 +114,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     #locals
     'users',
+    'timeline',
     #external
     'registration',
     'profiles',
