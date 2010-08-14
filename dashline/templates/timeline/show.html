@@ -3,5 +3,52 @@
 {% block Title %}{{ timeline.title }}{% endblock %}
 
 {% block content %}
-	STUB!
+
+	<h2>{{ timeline.title }}</h2>
+	<h3>by <a href='#TODO'>{{ timeline.owner }}</a>, created {{ timeline.date_created|date:'d/m/Y' }}</h3>
+	<p>{{ timeline.description|linebreaksbr }}</p>
+	
+	<ul>
+		{% for entry in timeline.entry_set.all %}
+		
+			{% if timeline.default_ordering == 'Y' %}
+				{% ifchanged entry.when|date:"Y" %}
+					{% if forloop.first %}
+						
+					{% else %}
+						</li>
+					{% endif %}
+						<li>{{ entry.when|date:"Y" }}<br/>
+				{% endifchanged %}
+				{{ entry.title }}<br/>
+			{% endif %}
+			
+			{% if timeline.default_ordering == 'M' %}
+				{% ifchanged entry.when|date:"m/Y" %}
+					{% if forloop.first %}
+		
+					{% else %}
+						</li>
+					{% endif %}
+						<li>{{ entry.when|date:"m/Y" }}<br/>
+				{% endifchanged %}
+				{{ entry.title }}<br/>
+			{% endif %}
+			
+			{% if timeline.default_ordering == 'D' %}
+				{% ifchanged entry.when|date:"d/m/Y" %}
+					{% if forloop.first %}
+					{% else %}
+						</li>
+					{% endif %}
+						<li>{{ entry.when|date:"d/m/Y" }}<br/>
+				{% endifchanged %}
+				{{ entry.title }}<br/>
+			{% endif %}
+			</li>
+			
+			
+		{% endfor %}
+	</ul>
+	
 {% endblock %}
