@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Browse Timelines{% endblock %}
+
+{% block content %}
+	{% for timeline in timelines.object_list %}
+		Faz algo com a timeline<br/>
+	{% endfor %}
+
+<div class="pagination">
+    <span class="step-links">
+        {% if timelines.has_previous %}
+            <a href="?page={{ timelines.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ timelines.number }} of {{ timelines.paginator.num_pages }}.
+        </span>
+
+        {% if timelines.has_next %}
+            <a href="?page={{ timelines.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock %}
