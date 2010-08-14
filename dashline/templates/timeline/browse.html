@@ -1,27 +1,16 @@
 {% extends 'base.html' %}
 
+{% load pagination_tags %}
+
 {% block title %}Browse Timelines{% endblock %}
 
 {% block content %}
     <ul>
+    {% autopaginate timelines.object_list 2 %}
 	{% for timeline in timelines.object_list %}
 		<li>{{ timeline }}</li>
 	{% endfor %}
+	{% paginate %}
 	</ul>
 
-<div class="pagination">
-    <span class="step-links">
-        {% if timelines.has_previous %}
-            <a href="?page={{ timelines.previous_page_number }}">previous</a>
-        {% endif %}
-
-        <span class="current">
-            Page {{ timelines.number }} of {{ timelines.paginator.num_pages }}.
-        </span>
-
-        {% if timelines.has_next %}
-            <a href="?page={{ timelines.next_page_number }}">next</a>
-        {% endif %}
-    </span>
-</div>
 {% endblock %}
