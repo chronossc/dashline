@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block Title %}Create a new Timeline{% endblock %}
+
+{% block content %}
+		<h2>Create a new timeline</h2>
+		
+		<p>Fill this form to create a new timeline.</p>
+		
+		{% if form.errors %}
+			{{ form. errors }}
+		{% endif %}
+		
+		<form action='{% url create %}' method='post'>
+			{{ form }}
+			<input type='submit' value='Create!' />
+		</form>
+		
+{% endblock %}
