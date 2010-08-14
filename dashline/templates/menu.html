@@ -1,7 +1,5 @@
 		<nav class='nav clear'>        
 						<ul>
-
-							<li id="home"><a href='{% url views_home %}'><b>Home</b></a></li>
 							{% if not user.is_authenticated %}
 								<li id="login"><a href="{% url django.contrib.auth.views.login %}"><b>Login</b></a></li>
 								<li id="register"><a href="{% url registration_register %}"><b>Register</b></a></li>
