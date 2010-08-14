@@ -6,7 +6,7 @@
 
 	<meta charset="utf-8" />
 	
-	<title>Dashline</title>
+	<title>Dashline {% block title %}{% endblock %}</title>
 	
 	<meta name="description" content="Dashline - Your events, your time.">
 	<!-- Google will often use this as its description of your page/site. Make it good. -->
@@ -98,7 +98,7 @@
 				    <li><a href="{% url django.contrib.auth.views.login %}">Login</a></li>
 				    <li><a href="{% url registration_register %}">Register</a></li>
 				{% else %}
-				    <li><a href="">Edit profile</a></li>
+				    <li><a href="{% url profiles_edit_profile %}">Edit profile</a></li>
 				    <li><a href="{% url django.contrib.auth.views.logout %}">Logout</a></li>
 				{% endif %}
 			</ol>

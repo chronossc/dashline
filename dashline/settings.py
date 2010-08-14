@@ -124,6 +124,8 @@ ACCOUNT_ACTIVATION_DAYS = 7
 
 AUTH_PROFILE_MODULE = 'users.UserProfile'
 
+LOGIN_REDIRECT_URL = '/profiles/'
+
 try:
     execfile(os.path.join(PROJECT_DIR, 'settings_local.py'), globals(), locals())
 except IOError:

@@ -1,1 +1,8 @@
-<h1>list</h1>
+{% extends "base.html" %}
+
+{% block content %}
+{% for obj in object_list %}
+<a href="{% url profiles_profile_detail obj.user %}">{{ obj }}</a>>
+{% endfor %}
+{% endblock %}
+ 
