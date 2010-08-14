@@ -11,7 +11,6 @@
 	<meta name="description" content="Dashline - Your events, your time.">
 	<!-- Google will often use this as its description of your page/site. Make it good. -->
 	
-	<meta name="author" content="Your Name Here" />
     <meta name="author" content="Felipe Rafael Prenholato (chronossc) <philipe.rp@gmail.com>" />
     <meta name="author" content="Diógenes A. Fernandes Hermínio (diofeher) <diofeher@gmail.com>" />
     <meta name="author" content="Henrique Pereira (ikkebr) <ikkibr@gmail.com>" />
@@ -92,24 +91,26 @@
 	<header>
 		
 		<h1><a href="/">Dashline home</a></h1>
+		
 		<nav>		
 			<ul id="menu">
 				<li id="home"><a href='{# url home #}'><b>Home</b></a></li>
 				
 			    {% if not user.is_authenticated %}
-				    <li><a href="{% url django.contrib.auth.views.login %}">Login</a></li>
-				    <li><a href="{% url registration_register %}">Register</a></li>
+				    <li id="login"><a href="{#% url django.contrib.auth.views.login %#}"><b>Login</b></a></li>
+				    <li id="register"><a href="{#% url registration_register %#}"><b>Register</b></a></li>
 				{% else %}
-				    <li><a href="{% url profiles_edit_profile %}">Edit profile</a></li>
-				    <li><a href="{% url django.contrib.auth.views.logout %}">Logout</a></li>
+				    <li id="edit_profile"><a href="{#% url profiles_edit_profile %#}"><b>Edit profile</b></a></li>
+				    <li id="logout"><a href="{#% url django.contrib.auth.views.logout %#}"><b>Logout</b></a></li>
 				{% endif %}		
 			
-				<li id="dropline"><a href="{# url browser #}"><b>Browse</b></a></li>
-				<li id="flyout"><a href="{# url create #}"><b>Create</b></a></li>
-				<li id="support"><a href="{# url about #}"><b>About</b></a></li>
-				<li id="contact"><a href="{# url contact #}"><b>Contact</b></a></li>
+				<li id="browse"><a href="{# url browser #}"><b>Browse Timelines</b></a></li>
+				<li id="create"><a href="{# url create #}"><b>Create</b></a></li>
+				<li id="about"><a href="{# url about #}"><b>About </b></a></li>
+				<li id="contact"><a href="{# url contact #}"><b>Contact us</b></a></li>
 			</ul>
 		</nav>
+
 	</header>
     
     <p>Comming soon ;)<p>
