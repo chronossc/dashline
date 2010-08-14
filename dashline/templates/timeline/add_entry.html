@@ -7,10 +7,6 @@
 		
 		<p>Fill this form to create a new timeline.</p>
 		
-		{% if form.errors %}
-			{{ form.errors }}
-		{% endif %}
-		
 		<form method='post' action='{{request.path}}'>{% csrf_token %}
 		  <fieldset>
 			<legend>Event entry</legend>
