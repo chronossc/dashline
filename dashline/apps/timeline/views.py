@@ -34,7 +34,7 @@ def create_timeline(request):
         form = TimeLineForm(request.POST)
         
         if form.is_valid():
-            form.owner = request.user            
+            form.owner_id = request.user.id            
             curr = form.save()
             return HttpResponseRedirect(reverse('add_entries', args=[curr.slug]))                                        
         
