@@ -2,3 +2,4 @@
 *.pyc
 *.orig
 settings_local.py
+*.db
