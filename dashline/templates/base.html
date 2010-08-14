@@ -96,6 +96,7 @@
 			<ol>
 			    {% if not user.is_authenticated %}
 				    <li><a href="{% url django.contrib.auth.views.login %}">Login</a></li>
+				    <li><a href="{% url registration_register %}">Register</a></li>
 				{% else %}
 				    <li><a href="">Edit profile</a></li>
 				    <li><a href="{% url django.contrib.auth.views.logout %}">Logout</a></li>
