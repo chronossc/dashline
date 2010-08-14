@@ -22,7 +22,7 @@ class TimeLine(models.Model):
     title = models.CharField(_("Title"), max_length=255)
     description = models.TextField(_("Description"))
     date_created = models.DateTimeField(_("Date created"), auto_now=True, auto_now_add=True)
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     default_ordering = models.CharField(_("Default ordering"), choices=ORDERING_CHOICES, max_length=2)
     
     class Meta:
@@ -38,7 +38,12 @@ class TimeLine(models.Model):
         while True:
             try:
                 tl = TimeLine.objects.get(slug=self.slug)
-                self.slug += '1'
+                if tl == self:
+                    super(TimeLine, self).save(*args, **kwargs)
+                    break
+                
+                self.slug += str(counter)
+                counter += 1
             except TimeLine.DoesNotExist:
                 super(TimeLine, self).save(*args, **kwargs)
                 break
