@@ -9,6 +9,7 @@ from apps.users import signals as users_signals
 
 class UserProfile(models.Model):
     user = models.ForeignKey(User, unique=True)
+    twitter = models.URLField(blank=True)
 
     @property
     def avatar(self):
