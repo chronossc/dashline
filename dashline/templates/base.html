@@ -1,2 +1,63 @@
-<html>
+<!DOCTYPE html>
+ 
+<html lang="en">
+ 
+<head>
+ 
+	<meta charset="utf-8">
+	
+	<title>DashLine | {%block title %}Home{% endblock %}</title>
+	
+	<meta name="description" content="Dashline - Your events, your time.">
+ 
+	<link rel="stylesheet" href="{{MEDIA_URL}}/css/base.css" media="all">
+	<link rel="stylesheet" href="{{MEDIA_URL}}/css/_print/main.css" media="print">
+	
+	<!--[if IE]>
+	<link rel="stylesheet" href="{{MEDIA_URL}}/css/_patches/win-ie-all.css" media="all">
+	<![endif]-->
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="{{MEDIA_URL}}/css/_patches/win-ie7.css" media="all">
+	<![endif]-->
+	<!--[if lt IE 7]>
+	<link rel="stylesheet" href="{{MEDIA_URL}}/css/_patches/win-ie-old.css" media="all">
+	<![endif]-->
+ 
+	{% block extrahead %}
+	{% endblock %}
+</head>
+ 
+<body>
+ 
+<section>
+ 
+	<header>
+	
+		<h1></h1>
+		
+		<nav>
+		{% block menu %}
+			<ul>
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a></li>
+				<li><a href="">Link</a></li>
+				
+			</ul>
+		{% endblock %}
+		</nav>
+	
+	</header>
+	
+	{% block content %}
+		<article>Content</article>
+	{% endblock %}
+	
+	<footer>Footer</footer>
+ 
+</section>
+ 
+</body>
 </html>
+
