@@ -37,7 +37,7 @@ def create_timeline(request):
             curr = form.save(commit=False)
             curr.owner = request.user
             curr.save()
-            return HttpResponseRedirect(reverse('add_entries', args=[curr.slug]))                                        
+            return HttpResponseRedirect(reverse('timeline_add_entries', args=[curr.slug]))                                        
         
     return render_to_response('timeline/create.html', {'form': form}, context_instance=RequestContext(request))
 
@@ -61,7 +61,7 @@ def add_entries(request, slug):
             if formset.is_valid():
                 formset.save()
                 #TODO mandar msg pro usuario
-                return HttpResponseRedirect(reverse('show', args=[timeline.slug]))
+                return HttpResponseRedirect(reverse('timeline_show', args=[timeline.slug]))
         
     #if it's a fresh form
     else:
