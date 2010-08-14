@@ -5,6 +5,9 @@
 								<li id="login"><a href="{% url django.contrib.auth.views.login %}"><b>Login</b></a></li>
 								<li id="register"><a href="{% url registration_register %}"><b>Register</b></a></li>
 							{% else %}
+							    <li id="view_profile">
+							        <a href="{% url profiles_profile_detail user.username %}"><b>View profile</b></a>
+							    </li>
 								<li id="edit_profile"><a href="{% url profiles_edit_profile %}"><b>Edit profile</b></a></li>
 							{% endif %}
 							<li id="browse"><a href="{# url browser #}"><b>Browse</b></a></li>
