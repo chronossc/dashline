@@ -9,8 +9,8 @@
 							    </li>
 								<li id="edit_profile"><a href="{% url profiles_edit_profile %}"><b>Edit profile</b></a></li>
 							{% endif %}
-							<li id="browse"><a href="{# url browser #}"><b>Browse</b></a></li>
-							<li id="create"><a href="{# url create #}"><b>Create a Timeline</b></a></li>
+							<li id="browse"><a href="{% url timeline_browse %}"><b>Browse</b></a></li>
+							<li id="create"><a href="{% url timeline_create %}"><b>Create a Timeline</b></a></li>
 							
 							{% if user.is_authenticated %}
 								<li id="logout"><a href="{% url django.contrib.auth.views.logout %}"><b>Logout</b></a></li>
