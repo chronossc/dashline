@@ -11,7 +11,7 @@
 			{{ form.errors }}
 		{% endif %}
 		
-		<form method='post' action='{{request.path}}'>
+		<form method='post' action='{{request.path}}'>{% csrf_token %}
 		  <fieldset>
 			<legend>Event entry</legend>
 			{{ timeline.management_form }}

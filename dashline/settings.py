@@ -128,6 +128,9 @@ AUTH_PROFILE_MODULE = 'users.UserProfile'
 
 LOGIN_REDIRECT_URL = '/profiles/'
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
+
+
 try:
     execfile(os.path.join(PROJECT_DIR, 'settings_local.py'), globals(), locals())
 except IOError:
