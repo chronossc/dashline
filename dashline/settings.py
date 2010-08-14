@@ -1,10 +1,19 @@
 # Django settings for dashline project.
 
+import os
+import sys
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
+
+sys.path.insert(0, os.path.join(PROJECT_DIR, 'apps'))
+
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('diofeher', 'diofeher@gmail.com'),
+    ('chronos', 'philipe.rp@gmail.com'),
+    ('ikke', 'ikkibr@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -92,3 +101,8 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
 )
+
+try:
+    execfile(os.path.join(PROJECT_DIR, 'settings_local.py'), globals(), locals())
+except IOError:
+    pass
