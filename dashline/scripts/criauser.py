@@ -13,7 +13,10 @@ try:
     u = User.objects.get(username=sys.argv[1])
     u.delete()
 except User.DoesNotExist:
-    u = User(username=sys.argv[1],email=sys.argv[2])
-    u.save()
-    u.set_password(sys.argv[3])
-    u.save()
+    pass
+
+
+u = User(username=sys.argv[1],email=sys.argv[2])
+u.save()
+u.set_password(sys.argv[3])
+u.save()
