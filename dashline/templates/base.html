@@ -89,19 +89,16 @@
 <body id="dashline.chronosbox.org">
 
 <section>
-
 	<header>
 		
 		<h1><a href="/">Dashline home</a></h1>
 	    {% comment %}
-		<nav>
-		
+		<nav>		
 			<ol>
 				<li><a href="">Nav Link 1</a></li>
 				<li><a href="">Nav Link 2</a></li>
 				<li><a href="">Nav Link 3</a></li>
 			</ol>
-		
 		</nav>
 	    {% endcomment %}
 	</header>
@@ -109,9 +106,8 @@
     <p>Comming soon ;)<p>
 
     {{ MEDIA_URL }}
-	{% comment %}
 	<article>
-		
+		{% block content %} 
 		<!-- HTML5 allows you to reset the header count with each new 
 			 piece of sectioning content, if you so choose. -->
 		<h1>Article Header 1</h1>
@@ -133,21 +129,20 @@
 		<h2>Article Subhead</h2>
 		
 		<p>Cras tincidunt, justo non viverra laoreet, purus nunc luctus metus, eget porta augue odio at massa. Nunc nisl orci.</p>
-	
+	    {% endblock %}
 	</article>
 
 	<aside>
-	
+	    {% block sidebar %}
 		<h2>Sidebar Content</h2>
-	
+		{% endblock %}
 	</aside>
-    {% endcomment %}	
 	<footer>
 		
 		<p><small>&copy; Copyright Dashline Team 2010. All Rights Reserved.</small></p>
 		
 	</footer>
-
+    
 </section>
 
 </body>
