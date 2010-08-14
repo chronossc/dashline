@@ -4,8 +4,6 @@ from models import TimeLine, Entry
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.core.urlresolvers import reverse
-
-
 from forms import TimeLineForm
 
 def show_timeline(request, slug):
@@ -19,11 +17,13 @@ def show_entry(request):
     #TODO
     pass
 
+
 @login_required
 def post_entry(request):
-    """ Adds one entry to a timeline """
+    """ Adds one entry to a timeline. AJAX stuff """
     #TODO
     pass
+
 
 @login_required
 def create_timeline(request):
@@ -36,10 +36,10 @@ def create_timeline(request):
         if form.is_valid():
             form.owner = request.user            
             curr = form.save()
-            
-            return HttpResponseRedirect(reverse('add_entries', args=[curr.slug]))
-                                        
+            return HttpResponseRedirect(reverse('add_entries', args=[curr.slug]))                                        
+        
     return render_to_response('timeline/create.html', {'form': form}, context_instance=RequestContext(request))
+
 
 @login_required
 def add_entries(request, slug):
@@ -49,18 +49,17 @@ def add_entries(request, slug):
     AddEntryFormset = inlineformset_factory(TimeLine,Entry,extra=0)
 
     # if this form has been submitted..
-    if request.method=='POST':
+    if request.method == 'POST':
         if 'add_entry' in request.POST:
             cp = request.POST.copy()
             cp['timeline-TOTAL_FORMS'] = int(cp['timeline-TOTAL_FORMS'])+ 1
             new_entry = AddEntryFormset(cp,prefix='timeline',instance=timeline)
+            
         elif 'submit' in request.POST:
             formset = AddEntryFormset(request.POST, instance=timeline)
-            
             if formset.is_valid():
                 formset.save()
                 #TODO mandar msg pro usuario
-                
                 return HttpResponseRedirect(reverse('show', args=[timeline.slug]))
         
     #if it's a fresh form
@@ -68,7 +67,7 @@ def add_entries(request, slug):
         new_entry = AddEntryFormset(prefix='timeline',instance=timeline)
     
     # return the rendered template
-    return render_to_response('timeline/add_entry.html', {'timeline':new_entry},context_instance=RequestContext(request))
+    return render_to_response('timeline/add_entry.html', {'timeline':new_entry}, context_instance=RequestContext(request))
     
 
 def get_hottest(request):
@@ -76,14 +75,17 @@ def get_hottest(request):
     #TODO
     pass
 
+
 def get_lastest(request):
     """ Returns the lastest timelines created """
     timelines = TimeLine.objects.filter().order_by(['-id'])[:15]
     return render_to_response('timeline/lastest.html', {'timelines': timelines}, context_instance=RequestContext(request))
 
+
 def browse_timelines(request):
+    """ Browse all timelines available in the site. """
     timeline = TimeLine.objects.all()
-    paginator = Paginator(timeline, 15) # Show 15 contacts per page
+    paginator = Paginator(timeline, 15) # Show 15 timelines per page
 
     try:
         page = int(request.GET.get('page', '1'))
