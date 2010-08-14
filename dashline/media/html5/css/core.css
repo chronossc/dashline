@@ -274,6 +274,8 @@ p{
 }
 
 .form {
+	margin-top: 15px;
+	padding-left: 10px;
 	width: 800px;
 }
 
@@ -286,9 +288,11 @@ p{
 
 .form input {
 	background-color: #24404c;
+	width: 300px;
 }
 
 .form p {
 	margin-top: 5px;
 	margin-bottom: 5px;
+	text-align: right;
 }
