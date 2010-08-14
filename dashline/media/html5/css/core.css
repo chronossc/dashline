@@ -57,8 +57,8 @@ img::-moz-selection {background: transparent;}
 body{
 	/* Setting the default text color, size, page background and a font stack: */
 	font-size:0.825em;
-	color:#fcfcfc;
-	background-color:#babaca;
+	color:#eaf5f7;
+	background-color:#2191c0;
 	font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -202,11 +202,19 @@ p{
 }
 
 .article{
-	background-color:#213E4A;
+	background-color:white;
 	margin:3em 0;
 	padding:20px;
 	
-	text-shadow:0 2px 0 black;
+	/*text-shadow:0 2px 0 black;*/
+}
+
+.article h1, h2, h3 {
+	color: #0f0f0f;
+}
+
+.article p {
+	color: #0f0f0f;
 }
 
 .figure{

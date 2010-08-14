@@ -71,45 +71,29 @@
 		{% include 'menu.html' %}
 		
 	</header>
-    
-    <p>Comming soon ;)<p>
-
-    {{ MEDIA_URL }}
-	<article>
+    	
+	<article class='article'>
+		<div>
+		<h1>Header</h1>
+		<h2>Header2</h2>
+		<h3>Header3</h3>
+		<p>Just a random block of my insignficant thoughts. Just a random block of my insignficant thoughts.Just a random block of my insignficant thoughts.Just a random block of my insignficant thoughts.Just a random block of my insignficant thoughts.Just a random block of my insignficant thoughts.Just a random block of my insignficant thoughts.</p>
 		{% block content %} 
-		<!-- HTML5 allows you to reset the header count with each new 
-			 piece of sectioning content, if you so choose. -->
-		<h1>Article Header 1</h1>
-		
-		<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
-		
-		<h2>Article Subhead</h2>
-		
-		<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
-	
-	</article>
-	
-	<article>
-	
-		<h1>Article Header 2</h1>
-		
-		<p>Praesent adipiscing nibh eget mauris gravida ullamcorper tempor enim elementum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		
-		<h2>Article Subhead</h2>
-		
-		<p>Cras tincidunt, justo non viverra laoreet, purus nunc luctus metus, eget porta augue odio at massa. Nunc nisl orci.</p>
 	    {% endblock %}
+		</div>
+		
 	</article>
 
 	<aside>
 	    {% block sidebar %}
-		<h2>Sidebar Content</h2>
+		<h2>Sidebar Content if we are gonna have a sidebar :)</h2>
 		{% endblock %}
 	</aside>
+	
 	<footer>
-		
-		<p><small>&copy; Copyright Dashline Team 2010. All Rights Reserved. This website is Pony Powered.</small></p>
-		
+		<div>
+			<p><small>&copy; Copyright Dashline Team 2010. All Rights Reserved. This website is Pony Powered.</small></p>	
+		</div>
 	</footer>
     
 </div>
