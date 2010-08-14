@@ -88,6 +88,7 @@ a img{
 h1,h2,h3{
 	font-family:"Myriad Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
 	text-shadow:0 1px 1px black;
+	margin-bottom: 10px;
 }
 
 h1{
@@ -273,10 +274,11 @@ p{
 	float:right;
 }
 
-.form {
-	margin-top: 15px;
-	padding-left: 10px;
-	width: 800px;
+.article form {
+	margin-top: 25px;
+	padding-left: 15px;
+	width: 300px;
+	text-align: right;
 }
 
 .form label {
@@ -287,12 +289,11 @@ p{
 }
 
 .form input {
-	background-color: #24404c;
-	width: 300px;
+	background-color: #0c244c;
+	width: 400px;
 }
 
 .form p {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	text-align: right;
 }
