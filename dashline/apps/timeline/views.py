@@ -37,9 +37,8 @@ def get_lastest(request):
     timelines = TimeLine.objects.filter().order_by(['-id'])[:15]
     return render_to_response('timeline/lastest.html', {'timelines': timelines}, context_instance=RequestContext(request))
 
-def browse_timelines(request):
-    timeline = TimeLine.objects.all()
-    paginator = Paginator(timeline, 15) # Show 25 contacts per page
+def browse_timelines(request):        
+    paginator = Paginator(timeline, 15) # Show 15 contacts per page
 
     try:
         page = int(request.GET.get('page', '1'))
@@ -51,4 +50,4 @@ def browse_timelines(request):
     except (EmptyPage, InvalidPage):
         timelines = paginator.page(paginator.num_pages)
 
-    return render_to_response('timeline/browse.html', {"timelines": paginator})
+    return render_to_response('timeline/browse.html', {"timelines": paginator}, context_instance=RequestContext(request))

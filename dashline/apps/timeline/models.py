@@ -24,6 +24,9 @@ class TimeLine(models.Model):
     date_created = models.DateTimeField(_("Date created"), auto_now=True, auto_now_add=True)
     slug = models.SlugField()
     
+    class Meta:
+        ordering = ('date_created', 'title')
+    
     def __unicode__(self):
         return "(%s) %s - %s" % (self.owner.username, self.title, self.date_created)
     
@@ -51,5 +54,8 @@ class Entry(models.Model):
     entry_content = models.TextField(_("Entry content"), )
     default_ordering = models.CharField(_("Default ordering"), choices=ORDERING_CHOICES, max_length=2)
     
+    class Meta:
+        ordering = ('when', 'title')
+        
     def __unicode__(self):
         return "(%s) %s - %s" % (self.timeline, self.title, self.when)
