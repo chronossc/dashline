@@ -21,5 +21,5 @@ class UserProfile(models.Model):
                                                                         'size': str(size) })
         gravatar = {'url': url, 'size': size}
         return '<img width="%s" src="%s" alt="%s"></img>' % (size, gravatar['url'], gravatar['size'])
-        
+
 signals.post_save.connect(users_signals.user_post_save,User)

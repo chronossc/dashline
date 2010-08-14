@@ -18,7 +18,7 @@ ORDERING_CHOICES = (
 
 class TimeLine(models.Model):
     """Class that contains base information for our timeline application."""
-    owner = models.ForeignKey(User)
+    owner = models.ForeignKey(User,related_name='timelines')
     title = models.CharField(_("Title"), max_length=255)
     description = models.TextField(_("Description"))
     date_created = models.DateTimeField(_("Date created"), auto_now=True, auto_now_add=True)
