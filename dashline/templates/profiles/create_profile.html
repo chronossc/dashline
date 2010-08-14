@@ -5,8 +5,8 @@
 <h1>Create your profile</h1>
  
 <form method="POST" action="">{% csrf_token %}
-    {{ form }}
-    <input type="submit" name="submit" value="Update" id="submit">
+    {{ form.as_p }}
+    <p><input type="submit" name="submit" value="Update" id="submit"></p>
 </form>
  
 {% endblock content %}
