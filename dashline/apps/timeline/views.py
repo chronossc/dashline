@@ -33,9 +33,10 @@ def create_timeline(request):
     if request.method == 'POST':
         form = TimeLineForm(request.POST)
         
-        if form.is_valid():
-            form.owner_id = request.user.id            
-            curr = form.save()
+        if form.is_valid():          
+            curr = form.save(commit=False)
+            curr.owner = request.user
+            curr.save()
             return HttpResponseRedirect(reverse('add_entries', args=[curr.slug]))                                        
         
     return render_to_response('timeline/create.html', {'form': form}, context_instance=RequestContext(request))
