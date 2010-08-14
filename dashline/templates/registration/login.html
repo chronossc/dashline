@@ -7,7 +7,7 @@
 {% endif %}
 
 <form method="post" action="{% url django.contrib.auth.views.login %}">{% csrf_token %}
-<table>
+<!--table>
 <tr>
     <td>{{ form.username.label_tag }}</td>
     <td>{{ form.username }}</td>
@@ -16,8 +16,9 @@
     <td>{{ form.password.label_tag }}</td>
     <td>{{ form.password }}</td>
 </tr>
-</table>
+</table-->
 
+	{{ form.as_p }}
 <input type="submit" value="login" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
