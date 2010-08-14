@@ -83,7 +83,7 @@ def get_lastest(request):
     return render_to_response('timeline/lastest.html', {'timelines': timelines}, context_instance=RequestContext(request))
 
 
-def browse_timelines(request):
+def browse_timelines(request, *args, **kwargs):
     """ Browse all timelines available in the site. """
     timeline = TimeLine.objects.all()
     paginator = Paginator(timeline, 15) # Show 15 timelines per page
