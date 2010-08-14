@@ -92,15 +92,18 @@
 	<header>
 		
 		<h1><a href="/">Dashline home</a></h1>
-	    {% comment %}
 		<nav>		
 			<ol>
-				<li><a href="">Nav Link 1</a></li>
-				<li><a href="">Nav Link 2</a></li>
+			    {% if not user.is_authenticated %}
+				<li><a href="{% url django.contrib.auth.views.login %}">Login</a></li>
+				{% else %}
+				<li><a href="{% url django.contrib.auth.views.logout %}">Logout</a></li>
+				{% endif %}
+				{% if session.user %}
 				<li><a href="">Nav Link 3</a></li>
+				{% endif %}
 			</ol>
 		</nav>
-	    {% endcomment %}
 	</header>
     
     <p>Comming soon ;)<p>

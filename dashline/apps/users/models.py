@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-    models
+from django.db import models
+from django.contrib.auth.models import User
+from apps.timeline.models import Timeline
 
-    description
-
-    @copyright: 2010 DiogenesAugusto <diofeher@gmail.com>
-    @license: GNU GPL.
-"""
+class Profile(User):
+    timelines = models.ManyToMany(Timeline)

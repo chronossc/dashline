@@ -117,7 +117,9 @@ INSTALLED_APPS = (
     'profiles',
 )
 
-ACCOUNT_ACTIVATION_DAYS = 7 
+ACCOUNT_ACTIVATION_DAYS = 7
+
+AUTH_PROFILE_MODEL = 'apps.users.Profile'
 
 try:
     execfile(os.path.join(PROJECT_DIR, 'settings_local.py'), globals(), locals())
