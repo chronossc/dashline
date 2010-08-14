@@ -23,6 +23,7 @@ class TimeLine(models.Model):
     description = models.TextField(_("Description"))
     date_created = models.DateTimeField(_("Date created"), auto_now=True, auto_now_add=True)
     slug = models.SlugField()
+    default_ordering = models.CharField(_("Default ordering"), choices=ORDERING_CHOICES, max_length=2)
     
     class Meta:
         ordering = ('date_created', 'title')
@@ -52,7 +53,6 @@ class Entry(models.Model):
     entry_type = models.CharField(_("Entry type"), choices=TYPE_CHOICES, max_length=10)
     description = models.CharField(_("Entry description"), max_length=255)
     entry_content = models.TextField(_("Entry content"), )
-    default_ordering = models.CharField(_("Default ordering"), choices=ORDERING_CHOICES, max_length=2)
     
     class Meta:
         ordering = ('when', 'title')
