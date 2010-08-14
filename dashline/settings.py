@@ -16,6 +16,12 @@ ADMINS = (
     ('ikke', 'ikkibr@gmail.com'),
 )
 
+_ = lambda s: s
+LANGUAGES = (
+    ('en', _('English')),
+    ('pt-br', _('Portuguese (Brazil)')),
+)
+
 MANAGERS = ADMINS
 
 DATABASES = {
