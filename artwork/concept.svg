@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1440"
+   height="900"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="concept.svg"
+   style="enable-background:new">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective3623"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3653"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3678"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3678-6"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3735"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3939"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3979"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4001"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4097"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4119"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4158"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4201"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4230"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4293"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4339"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4339-7"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4339-6"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4339-5"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4339-2"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4339-63"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4484"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4484-7"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4484-72"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4484-4"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4484-8"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4484-6"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4484-3"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4484-79"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4484-30"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4484-2"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4971"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4971-9"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4971-95"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5056"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5081"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5106"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5131"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5178"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="624.93112"
+     inkscape:cy="710.99318"
+     inkscape:document-units="px"
+     inkscape:current-layer="svg2"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="831"
+     inkscape:window-x="-4"
+     inkscape:window-y="46"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-152.36218)"
+     style="display:inline">
+    <rect
+       style="opacity:0;fill:#1a1a1a;fill-opacity:0;fill-rule:evenodd;stroke:none"
+       id="rect2816"
+       width="505.71429"
+       height="582.85712"
+       x="-1094.2858"
+       y="6.6478968" />
+    <rect
+       style="fill:#2191c0;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline;enable-background:new"
+       id="rect3590"
+       width="1448.5714"
+       height="914.28571"
+       x="-4.2857094"
+       y="145.21933" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:new"
+       id="rect3605-2"
+       width="678.80322"
+       height="38"
+       x="529.76819"
+       y="193.50002"
+       ry="10" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000080;fill-opacity:1;stroke:none;enable-background:new;font-family:Bitstream Vera Sans"
+       x="227.50276"
+       y="210.93361"
+       id="text3601"><tspan
+         sodipodi:role="line"
+         id="tspan3603"
+         x="227.50276"
+         y="210.93361">DASHLINE</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;enable-background:new"
+       id="rect3605"
+       width="977.14288"
+       height="522.85712"
+       x="231.42854"
+       y="249.50504"
+       ry="10" />
+  </g>
+  <rect
+     style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     id="rect3802"
+     width="158.39191"
+     height="29.698484"
+     x="860.11993"
+     y="45.288593"
+     ry="10" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="menu e users"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-size:24.61961937px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="701.00964"
+       y="69.166191"
+       id="text3637"><tspan
+         sodipodi:role="line"
+         x="701.00964"
+         y="69.166191"
+         id="tspan3641">PROFILE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24.79535103px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="874.7124"
+       y="69.163681"
+       id="text3637-8"><tspan
+         sodipodi:role="line"
+         x="874.7124"
+         y="69.163681"
+         id="tspan3641-9">TIMELINES</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24.79535103px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="1074.0023"
+       y="69.163681"
+       id="text3637-8-6"><tspan
+         sodipodi:role="line"
+         x="1074.0023"
+         y="69.163681"
+         id="tspan3641-9-0">LOGOUT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:24.79535103px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="557.33466"
+       y="69.163681"
+       id="text3637-8-4"><tspan
+         sodipodi:role="line"
+         x="557.33466"
+         y="69.163681"
+         id="tspan3641-9-09">HOME</tspan></text>
+    <g
+       transform="translate(0,2.6171874e-6)"
+       style="enable-background:new"
+       id="g4080">
+      <rect
+         ry="3.4000001"
+         y="112.14285"
+         x="246.42854"
+         height="84"
+         width="84"
+         id="rect3963-4"
+         style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         ry="3"
+         y="113.14285"
+         x="247.42854"
+         height="82"
+         width="82"
+         id="rect3963"
+         style="fill:#0a76b7;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <image
+         xlink:href="file:///home/felipe/projects/dashline-repo/artwork/gravatar.jpg"
+         width="80"
+         height="80"
+         id="image3941"
+         x="248.42854"
+         y="114.14285"
+         style="fill:#000000;fill-opacity:1" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:20.84594917px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;display:inline;enable-background:new;font-family:Bitstream Vera Sans"
+       x="356.17224"
+       y="134.6776"
+       id="text4144"
+       transform="scale(0.97043898,1.0304615)"><tspan
+         sodipodi:role="line"
+         x="356.17224"
+         y="134.6776"
+         id="tspan4148">USER NAME</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.18170452px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;display:inline;enable-background:new;font-family:Bitstream Vera Sans"
+       x="354.44504"
+       y="161.87529"
+       id="text4144-4"
+       transform="scale(0.97043898,1.0304615)"><tspan
+         sodipodi:role="line"
+         x="354.44504"
+         y="161.87529"
+         id="tspan4148-6">SOCIAL NETWORK </tspan><tspan
+         sodipodi:role="line"
+         x="354.44504"
+         y="177.10242"
+         id="tspan4218">LNKS</tspan></text>
+    <g
+       id="g4825"
+       transform="translate(72,-0.28227407)">
+      <rect
+         ry="10"
+         y="112.94103"
+         x="500.20239"
+         height="104.58328"
+         width="618.58246"
+         id="rect4220"
+         style="fill:#000000;stroke:#1a1a1a;stroke-width:1.03180587" />
+      <g
+         transform="translate(2.9992291,2.2390677)"
+         id="g4763">
+        <text
+           xml:space="preserve"
+           style="font-size:16.01296043px;font-style:normal;font-weight:normal;fill:#f9f9f9;fill-opacity:1;stroke:none;display:inline;enable-background:new;font-family:Bitstream Vera Sans"
+           x="504.1149"
+           y="128.30975"
+           id="text4253-5"><tspan
+             sodipodi:role="line"
+             id="tspan4255-2"
+             x="504.1149"
+             y="128.30975">FRIENDS</tspan><tspan
+             sodipodi:role="line"
+             x="504.1149"
+             y="148.32596"
+             id="tspan4310" /></text>
+        <g
+           id="g4705">
+          <g
+             transform="translate(6.3995618e-6,0)"
+             id="g4312">
+            <g
+               transform="matrix(0.77380952,0,0,0.77380952,315.22451,48.070162)"
+               style="display:inline;enable-background:new"
+               id="g4080-6">
+              <rect
+                 ry="3.4000001"
+                 y="112.14285"
+                 x="246.42854"
+                 height="84"
+                 width="84"
+                 id="rect3963-4-3"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <rect
+                 ry="3"
+                 y="113.14285"
+                 x="247.42854"
+                 height="82"
+                 width="82"
+                 id="rect3963-9"
+                 style="fill:#0a76b7;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <image
+                 xlink:href="file:///home/felipe/projects/dashline-repo/artwork/gravatar.jpg"
+                 width="80"
+                 height="80"
+                 id="image3941-9"
+                 x="248.42854"
+                 y="114.14285"
+                 style="fill:#000000;fill-opacity:1" />
+            </g>
+            <text
+               xml:space="preserve"
+               style="font-size:11.67814445px;font-style:normal;font-weight:normal;fill:#f9f9f9;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+               x="509.00977"
+               y="209.39671"
+               id="text4253"><tspan
+                 sodipodi:role="line"
+                 id="tspan4255"
+                 x="509.00977"
+                 y="209.39671">username</tspan></text>
+          </g>
+          <g
+             id="g4312-8"
+             style="display:inline;enable-background:new"
+             transform="translate(459.76208,0)">
+            <g
+               transform="matrix(0.77380952,0,0,0.77380952,315.22451,48.070162)"
+               style="display:inline;enable-background:new"
+               id="g4080-6-6">
+              <rect
+                 ry="3.4000001"
+                 y="112.14285"
+                 x="246.42854"
+                 height="84"
+                 width="84"
+                 id="rect3963-4-3-3"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <rect
+                 ry="3"
+                 y="113.14285"
+                 x="247.42854"
+                 height="82"
+                 width="82"
+                 id="rect3963-9-7"
+                 style="fill:#0a76b7;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <image
+                 xlink:href="file:///home/felipe/projects/dashline-repo/artwork/gravatar.jpg"
+                 width="80"
+                 height="80"
+                 id="image3941-9-7"
+                 x="248.42854"
+                 y="114.14285"
+                 style="fill:#000000;fill-opacity:1" />
+            </g>
+            <text
+               xml:space="preserve"
+               style="font-size:11.67814445px;font-style:normal;font-weight:normal;fill:#f9f9f9;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+               x="509.00977"
+               y="209.39671"
+               id="text4253-2"><tspan
+                 sodipodi:role="line"
+                 id="tspan4255-3"
+                 x="509.00977"
+                 y="209.39671">username</tspan></text>
+          </g>
+          <g
+             id="g4312-5"
+             style="display:inline;enable-background:new"
+             transform="translate(383.13507,0)">
+            <g
+               transform="matrix(0.77380952,0,0,0.77380952,315.22451,48.070162)"
+               style="display:inline;enable-background:new"
+               id="g4080-6-3">
+              <rect
+                 ry="3.4000001"
+                 y="112.14285"
+                 x="246.42854"
+                 height="84"
+                 width="84"
+                 id="rect3963-4-3-7"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <rect
+                 ry="3"
+                 y="113.14285"
+                 x="247.42854"
+                 height="82"
+                 width="82"
+                 id="rect3963-9-6"
+                 style="fill:#0a76b7;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <image
+                 xlink:href="file:///home/felipe/projects/dashline-repo/artwork/gravatar.jpg"
+                 width="80"
+                 height="80"
+                 id="image3941-9-81"
+                 x="248.42854"
+                 y="114.14285"
+                 style="fill:#000000;fill-opacity:1" />
+            </g>
+            <text
+               xml:space="preserve"
+               style="font-size:11.67814445px;font-style:normal;font-weight:normal;fill:#f9f9f9;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+               x="509.00977"
+               y="209.39671"
+               id="text4253-3"><tspan
+                 sodipodi:role="line"
+                 id="tspan4255-6"
+                 x="509.00977"
+                 y="209.39671">username</tspan></text>
+          </g>
+          <g
+             id="g4312-0"
+             style="display:inline;enable-background:new"
+             transform="translate(306.50805,0)">
+            <g
+               transform="matrix(0.77380952,0,0,0.77380952,315.22451,48.070162)"
+               style="display:inline;enable-background:new"
+               id="g4080-6-35">
+              <rect
+                 ry="3.4000001"
+                 y="112.14285"
+                 x="246.42854"
+                 height="84"
+                 width="84"
+                 id="rect3963-4-3-8"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <rect
+                 ry="3"
+                 y="113.14285"
+                 x="247.42854"
+                 height="82"
+                 width="82"
+                 id="rect3963-9-5"
+                 style="fill:#0a76b7;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <image
+                 xlink:href="file:///home/felipe/projects/dashline-repo/artwork/gravatar.jpg"
+                 width="80"
+                 height="80"
+                 id="image3941-9-0"
+                 x="248.42854"
+                 y="114.14285"
+                 style="fill:#000000;fill-opacity:1" />
+            </g>
+            <text
+               xml:space="preserve"
+               style="font-size:11.67814445px;font-style:normal;font-weight:normal;fill:#f9f9f9;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+               x="509.00977"
+               y="209.39671"
+               id="text4253-9"><tspan
+                 sodipodi:role="line"
+                 id="tspan4255-9"
+                 x="509.00977"
+                 y="209.39671">username</tspan></text>
+          </g>
+          <g
+             id="g4312-02"
+             style="display:inline;enable-background:new"
+             transform="translate(76.627012,0)">
+            <g
+               transform="matrix(0.77380952,0,0,0.77380952,315.22451,48.070162)"
+               style="display:inline;enable-background:new"
+               id="g4080-6-4">
+              <rect
+                 ry="3.4000001"
+                 y="112.14285"
+                 x="246.42854"
+                 height="84"
+                 width="84"
+                 id="rect3963-4-3-90"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <rect
+                 ry="3"
+                 y="113.14285"
+                 x="247.42854"
+                 height="82"
+                 width="82"
+                 id="rect3963-9-1"
+                 style="fill:#0a76b7;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <image
+                 xlink:href="file:///home/felipe/projects/dashline-repo/artwork/gravatar.jpg"
+                 width="80"
+                 height="80"
+                 id="image3941-9-2"
+                 x="248.42854"
+                 y="114.14285"
+                 style="fill:#000000;fill-opacity:1" />
+            </g>
+            <text
+               xml:space="preserve"
+               style="font-size:11.67814445px;font-style:normal;font-weight:normal;fill:#f9f9f9;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+               x="509.00977"
+               y="209.39671"
+               id="text4253-0"><tspan
+                 sodipodi:role="line"
+                 id="tspan4255-0"
+                 x="509.00977"
+                 y="209.39671">username</tspan></text>
+          </g>
+          <g
+             id="g4312-1"
+             style="display:inline;enable-background:new"
+             transform="translate(229.88104,0)">
+            <g
+               transform="matrix(0.77380952,0,0,0.77380952,315.22451,48.070162)"
+               style="display:inline;enable-background:new"
+               id="g4080-6-0">
+              <rect
+                 ry="3.4000001"
+                 y="112.14285"
+                 x="246.42854"
+                 height="84"
+                 width="84"
+                 id="rect3963-4-3-05"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <rect
+                 ry="3"
+                 y="113.14285"
+                 x="247.42854"
+                 height="82"
+                 width="82"
+                 id="rect3963-9-0"
+                 style="fill:#0a76b7;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <image
+                 xlink:href="file:///home/felipe/projects/dashline-repo/artwork/gravatar.jpg"
+                 width="80"
+                 height="80"
+                 id="image3941-9-31"
+                 x="248.42854"
+                 y="114.14285"
+                 style="fill:#000000;fill-opacity:1" />
+            </g>
+            <text
+               xml:space="preserve"
+               style="font-size:11.67814445px;font-style:normal;font-weight:normal;fill:#f9f9f9;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+               x="509.00977"
+               y="209.39671"
+               id="text4253-80"><tspan
+                 sodipodi:role="line"
+                 id="tspan4255-1"
+                 x="509.00977"
+                 y="209.39671">username</tspan></text>
+          </g>
+          <g
+             id="g4312-33"
+             style="display:inline;enable-background:new"
+             transform="translate(153.25403,0)">
+            <g
+               transform="matrix(0.77380952,0,0,0.77380952,315.22451,48.070162)"
+               style="display:inline;enable-background:new"
+               id="g4080-6-7">
+              <rect
+                 ry="3.4000001"
+                 y="112.14285"
+                 x="246.42854"
+                 height="84"
+                 width="84"
+                 id="rect3963-4-3-94"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <rect
+                 ry="3"
+                 y="113.14285"
+                 x="247.42854"
+                 height="82"
+                 width="82"
+                 id="rect3963-9-9"
+                 style="fill:#0a76b7;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <image
+                 xlink:href="file:///home/felipe/projects/dashline-repo/artwork/gravatar.jpg"
+                 width="80"
+                 height="80"
+                 id="image3941-9-9"
+                 x="248.42854"
+                 y="114.14285"
+                 style="fill:#000000;fill-opacity:1" />
+            </g>
+            <text
+               xml:space="preserve"
+               style="font-size:11.67814445px;font-style:normal;font-weight:normal;fill:#f9f9f9;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+               x="509.00977"
+               y="209.39671"
+               id="text4253-19"><tspan
+                 sodipodi:role="line"
+                 id="tspan4255-4"
+                 x="509.00977"
+                 y="209.39671">username</tspan></text>
+          </g>
+          <g
+             id="g4312-06"
+             style="display:inline;enable-background:new"
+             transform="translate(536.38904,0)">
+            <g
+               transform="matrix(0.77380952,0,0,0.77380952,315.22451,48.070162)"
+               style="display:inline;enable-background:new"
+               id="g4080-6-5">
+              <rect
+                 ry="3.4000001"
+                 y="112.14285"
+                 x="246.42854"
+                 height="84"
+                 width="84"
+                 id="rect3963-4-3-95"
+                 style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <rect
+                 ry="3"
+                 y="113.14285"
+                 x="247.42854"
+                 height="82"
+                 width="82"
+                 id="rect3963-9-61"
+                 style="fill:#0a76b7;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+              <image
+                 xlink:href="file:///home/felipe/projects/dashline-repo/artwork/gravatar.jpg"
+                 width="80"
+                 height="80"
+                 id="image3941-9-1"
+                 x="248.42854"
+                 y="114.14285"
+                 style="fill:#000000;fill-opacity:1" />
+            </g>
+            <text
+               xml:space="preserve"
+               style="font-size:11.67814445px;font-style:normal;font-weight:normal;fill:#f9f9f9;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+               x="509.00977"
+               y="209.39671"
+               id="text4253-4"><tspan
+                 sodipodi:role="line"
+                 id="tspan4255-37"
+                 x="509.00977"
+                 y="209.39671">username</tspan></text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="timeline" />
+  <g
+     id="g4958"
+     transform="translate(0,-0.35355158)">
+    <rect
+       ry="5"
+       y="231.07698"
+       x="271.52899"
+       height="19.79899"
+       width="50.91169"
+       id="rect4898"
+       style="fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a" />
+    <text
+       id="text4900"
+       y="247.14165"
+       x="280.74228"
+       style="font-size:17.24902153px;font-style:normal;font-weight:normal;fill:#f2f2f2;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="247.14165"
+         x="280.74228"
+         id="tspan4902"
+         sodipodi:role="line">Ano</tspan></text>
+  </g>
+  <rect
+     style="fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:1.30264401"
+     id="rect4898-4"
+     width="87.732155"
+     height="19.496346"
+     x="389.89886"
+     y="230.87476"
+     ry="5" />
+  <text
+     xml:space="preserve"
+     style="font-size:17.24902153px;font-style:normal;font-weight:normal;fill:#f2f2f2;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+     x="398.96082"
+     y="246.7881"
+     id="text4900-39"><tspan
+       sodipodi:role="line"
+       id="tspan4902-4"
+       x="398.96082"
+       y="246.7881">Semana</tspan></text>
+  <g
+     id="g5032"
+     transform="translate(-5.2374725,-0.35355158)">
+    <rect
+       ry="5"
+       y="231.07698"
+       x="335.87573"
+       height="19.79899"
+       width="50.91169"
+       id="rect4898-3"
+       style="fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a" />
+    <text
+       id="text4900-9"
+       y="247.14165"
+       x="345.08902"
+       style="font-size:17.24902153px;font-style:normal;font-weight:normal;fill:#f2f2f2;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="247.14165"
+         x="345.08902"
+         id="tspan4902-0"
+         sodipodi:role="line">Mês</tspan></text>
+  </g>
+  <g
+     id="g5202"
+     transform="translate(-9.0271149,4)">
+    <g
+       transform="translate(0,48)"
+       id="g5037">
+      <rect
+         style="fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a"
+         id="rect4894"
+         width="776.40326"
+         height="4.2426405"
+         x="340.82547"
+         y="277.00089" />
+      <rect
+         style="fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:0.75597668"
+         id="rect4896"
+         width="12.829353"
+         height="19.244022"
+         x="409.12436"
+         y="269.50018" />
+    </g>
+    <text
+       id="text4900-39-7"
+       y="274.27887"
+       x="504.97977"
+       style="font-size:17.24902153px;font-style:normal;font-weight:normal;fill:#4d4d4d;fill-opacity:1;stroke:none;enable-background:new;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="274.27887"
+         x="504.97977"
+         id="tspan4902-4-2"
+         sodipodi:role="line">2010</tspan></text>
+    <text
+       id="text4900-39-7-9"
+       y="308.62247"
+       x="405.02454"
+       style="font-size:17.24902153px;font-style:normal;font-weight:normal;fill:#4d4d4d;fill-opacity:1;stroke:none;enable-background:new;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="308.62247"
+         x="405.02454"
+         id="tspan4902-4-2-0"
+         sodipodi:role="line">Julho</tspan></text>
+    <g
+       id="g5196">
+      <text
+         xml:space="preserve"
+         style="font-size:17.24902153px;font-style:normal;font-weight:normal;fill:#4d4d4d;fill-opacity:1;stroke:none;enable-background:new;font-family:Bitstream Vera Sans"
+         x="679.80676"
+         y="308.28979"
+         id="text4900-39-7-7"><tspan
+           sodipodi:role="line"
+           id="tspan4902-4-2-2"
+           x="679.80676"
+           y="308.28979">Agosto</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:17.24902153px;font-style:normal;font-weight:normal;fill:#4d4d4d;fill-opacity:1;stroke:none;enable-background:new;font-family:Bitstream Vera Sans"
+         x="970.86938"
+         y="310.22696"
+         id="text4900-39-7-7-5"><tspan
+           sodipodi:role="line"
+           id="tspan4902-4-2-2-0"
+           x="970.86938"
+           y="310.22696">Setembro</tspan></text>
+    </g>
+    <rect
+       ry="4"
+       y="348.47455"
+       x="567.30017"
+       height="252"
+       width="8"
+       id="rect5156"
+       style="fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a" />
+    <rect
+       ry="4"
+       y="348.47455"
+       x="862.93195"
+       height="252"
+       width="8"
+       id="rect5156-4"
+       style="fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;enable-background:new" />
+  </g>
+</svg>
