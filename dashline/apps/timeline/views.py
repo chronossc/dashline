@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.core.urlresolvers import reverse
 from forms import TimeLineForm
+from django.forms.models import inlineformset_factory
 
 def show_timeline(request, slug):
     """ View that returns a timeline or a 404 error if the timeline cannot be found """
@@ -47,14 +48,14 @@ def add_entries(request, slug):
     """ First way to add entries do a timeline """
     timeline = get_object_or_404(TimeLine, slug=slug, owner=request.user)
     
-    AddEntryFormset = inlineformset_factory(TimeLine,Entry,extra=0)
+    AddEntryFormset = inlineformset_factory(TimeLine, Entry, extra=0)
 
     # if this form has been submitted..
     if request.method == 'POST':
         if 'add_entry' in request.POST:
             cp = request.POST.copy()
             cp['timeline-TOTAL_FORMS'] = int(cp['timeline-TOTAL_FORMS'])+ 1
-            new_entry = AddEntryFormset(cp,prefix='timeline',instance=timeline)
+            new_entry = AddEntryFormset(cp, prefix='timeline', instance=timeline)
             
         elif 'submit' in request.POST:
             formset = AddEntryFormset(request.POST, instance=timeline)
@@ -65,7 +66,7 @@ def add_entries(request, slug):
         
     #if it's a fresh form
     else:
-        new_entry = AddEntryFormset(prefix='timeline',instance=timeline)
+        new_entry = AddEntryFormset(prefix='timeline', instance=timeline)
     
     # return the rendered template
     return render_to_response('timeline/add_entry.html', {'timeline':new_entry}, context_instance=RequestContext(request))
