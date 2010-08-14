@@ -5,8 +5,9 @@
 {% block content %}
 <h1>{{ profile.user.username }}</h1>
 {{ profile.avatar|safe }}
-about: {{ profile.description }}
-country: {{ profile.country }}
+
+{% if profile.description %}about: {{ profile.description }}{% endif %}
+{% if profile.country %}country: {{ profile.country }}{% endif %}
 <ul>
     {% if profile.twitter %}<li>Twitter: {{ profile.twitter }}</li>{% endif %}
 </ul>

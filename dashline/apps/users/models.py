@@ -24,8 +24,7 @@ class UserProfile(models.Model):
                                                                         'gravatar_id': hashlib.md5(email).hexdigest(), 
                                                                         'default': default, 
                                                                         'size': str(size) })
-        gravatar = {'url': url, 'size': size}
-        return '<img width="%s" src="%s" alt="%s"></img>' % (size, gravatar['url'], gravatar['size'])
+        return '<img width="%s" src="%s" alt="%s"></img>' % (size, url, size)
 
     def __unicode__(self):
         return self.user.username
