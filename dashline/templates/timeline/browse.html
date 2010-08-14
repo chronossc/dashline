@@ -6,8 +6,8 @@
 
 {% block content %}
     <ul>
-    {% autopaginate timelines.object_list 2 %}
-	{% for timeline in timelines.object_list %}
+    {% autopaginate timelines 4 %}
+	{% for timeline in timelines %}
 		<li>{{ timeline }}</li>
 	{% endfor %}
 	{% paginate %}

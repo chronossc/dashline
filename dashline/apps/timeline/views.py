@@ -87,16 +87,7 @@ def get_lastest(request):
 def browse_timelines(request, *args, **kwargs):
     """ Browse all timelines available in the site. """
     timeline = TimeLine.objects.all()
-    paginator = Paginator(timeline, 15) # Show 15 timelines per page
 
-    try:
-        page = int(request.GET.get('page', '1'))
-    except ValueError:
-        page = 1
-
-    try:
-        timelines = paginator.page(page)
-    except (EmptyPage, InvalidPage):
-        timelines = paginator.page(paginator.num_pages)
-
-    return render_to_response('timeline/browse.html', {"timelines": paginator}, context_instance=RequestContext(request))
+    return render_to_response('timeline/browse.html',
+                              {"timelines": timeline },
+                              context_instance=RequestContext(request))
