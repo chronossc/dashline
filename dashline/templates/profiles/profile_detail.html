@@ -30,4 +30,11 @@
     <li>No friends yet.</li>
 {% endfor %}
 </ul>
+
+<h3> Timelines <h3>
+	<ul>
+{% for timeline in profile.user.timeline_set.all %}
+		<li><a href='{% url timeline_show timeline.slug %}'>{{ timeline.title }}</a></li>
+{% endfor %}
+	</ul>
 {% endblock %}
