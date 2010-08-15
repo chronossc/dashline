@@ -28,6 +28,9 @@ class UserProfile(models.Model):
     description = models.TextField(_('Description'), blank=True)
     twitter = models.URLField(blank=True)
     
+    def is_following(self, user):
+        return Follow.objects.filter(from_user=self.user, to_user=user)
+    
     @property
     def following(self):
         return Follow.objects.filter(from_user=self.user)

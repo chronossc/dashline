@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 
-{% load users_tags %}
-
 {% block title %}{{ profile.user.username }}'s profile{% endblock %}
 
 {% block content %}
 <h1>{{ profile.user.username }}</h1>
 {{ profile.avatar|safe }}
 
-{% if user != profile.user and is_following(profile.user) %}
+{% if user != profile.user and is_following %}
     <a href="{% url users_follow profile.user %}">{{ _('follow') }}</a>
 {% endif %}
 
