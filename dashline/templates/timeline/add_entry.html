@@ -10,13 +10,9 @@
 
 	<script type="text/javascript">
 		$(function() {
-			$('#id_entry tbody tr').formset({
-				// For inline formsets, be sure to set the prefix, as the default prefix
-				// ('form') isn't correct.
-				// Django appears to generate the prefix from the lowercase plural
-				// name of the related model, with camel-case converted to underscores.
+			$('#accordion ').formset({
 				prefix: 'timeline'
-			})
+			});
 		})
 		
 	</script>
@@ -57,15 +53,17 @@
 						
 						<div id="accordion">
 							{% for form in formset.forms %}
-							<h3><a href="#">New Event</a></h3>
-							<div id="{{ form.prefix }}-row">
-								{% for fld in form.hidden_fields %}{{ fld }}{% endfor %}
-								{% if form.instance.pk %}{{ form.DELETE }}{% endif %}
-								
-								<p>{{ form.title }}</p>
-								<p>{{ form.when }}</p>
-								<p>{{ form.description }}</p>
-								<p>{{ form.entry_type }}<br/>{{ form.entry_content }}</p>
+							<div>
+								<h3><a href="#">New Event</a></h3>
+								<div id="{{ form.prefix }}-row">
+									{% for fld in form.hidden_fields %}{{ fld }}{% endfor %}
+									{% if form.instance.pk %}{{ form.DELETE }}{% endif %}
+									
+									<p>{{ form.title }}</p>
+									<p>{{ form.when }}</p>
+									<p>{{ form.description }}</p>
+									<p>{{ form.entry_type }}<br/>{{ form.entry_content }}</p>
+								</div>
 							</div>
 							{% endfor %}
 						</div>
