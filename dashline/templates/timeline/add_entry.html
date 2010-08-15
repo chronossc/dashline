@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block Title %}Add entries to your timeline{% endblock %}
+{% block title %}Add entries to your timeline{% endblock %}
 
 {% block extrajs %} 
 	<script type="text/javascript" src="{{MEDIA_URL}}/js/jquery.formset.min.js"></script>
@@ -29,7 +29,7 @@
 			changeYear: true
 		});});
 		
-		$('textarea').live('focus', function(){ $('#myTextarea').elastic(); });
+		$('textarea').live('focus', function(){ $(this).elastic(); });
 		
     });
 	</script>
