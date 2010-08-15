@@ -9,11 +9,15 @@ from users.models import UserProfile
 
 
 class TimeLineIndex(SearchIndex):
-    pass
+    text = CharField(document=True, use_template=True)
+    author = CharField(model_attr='user')
+    
 
 
 class UserProfileIndex(SearchIndex):
-    pass
+    text = CharField(document=True, use_template=True)
+    user = CharField(model_attr='user')
+    
 
 
 site.register(TimeLine, TimeLineIndex)
