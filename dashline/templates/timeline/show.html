@@ -21,15 +21,15 @@
 				
 			{% ifchanged entry.when|date:"Y" %}
 				<li class='{{ entry.when|date:"Y" }}'> <h2>{{ entry.when|date:"Y" }}</h2><ul>
-			{% endif %}
+			{% endifchanged %}
 				
 			{% ifchanged entry.when|date:"m/Y" %}
 				<li class='{{ entry.when|date:"m_Y" }}'> <h2>{{ entry.when|date:"m/Y" }}</h2><ul>
-			{% endif %}
+			{% endifchanged %}
 				
 			{% ifchanged entry.when|date:"d/m/Y" %}
 				<li class='{{ entry.when|date:"d_m_Y" }}'> <h2>{{ entry.when|date:"d/m/Y" }}</h2><ul>
-			{% endif %}
+			{% endifchanged %}
 				
 			<li class='entry'>
 				<p>
