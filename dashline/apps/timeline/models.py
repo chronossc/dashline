@@ -22,7 +22,7 @@ class TimeLine(models.Model):
     owner = models.ForeignKey(User, related_name='timelines')
     title = models.CharField(_("Title"), max_length=255)
     description = models.TextField(_("Description"))
-    date_created = models.DateTimeField(_("Date created"), auto_now=True, auto_now_add=True)
+    date_created = models.DateTimeField(_("Date created"), auto_now=False, auto_now_add=True)
     slug = models.SlugField(unique=True)
     default_ordering = models.CharField(_("Default ordering"), choices=ORDERING_CHOICES, max_length=2)
     default_timeline = models.BooleanField(default=False,blank=True)
