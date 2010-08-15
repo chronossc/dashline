@@ -201,6 +201,11 @@ p{
 	border-radius:10px;
 }
 
+
+#messages {
+	background-color: #f0f0f0;
+	color: red;
+}
 /* Article styles: */
 
 #page{
