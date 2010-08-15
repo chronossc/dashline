@@ -53,7 +53,7 @@
 							{% for form in formset.forms %}
 							
 								<fieldset id="{{ form.prefix }}-row">
-								<a href="#">New Event</a><br/>
+								<legend>New Event</legend>
 									{% for fld in form.hidden_fields %}{{ fld }}{% endfor %}
 									{% if form.instance.pk %}{{ form.DELETE }}{% endif %}
 									
