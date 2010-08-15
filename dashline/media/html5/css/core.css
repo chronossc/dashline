@@ -218,6 +218,7 @@ p{
 	background-color:white;
 	margin:3em 0;
 	padding:20px;
+	min-height: 500px;
 	
 	/*text-shadow:0 2px 0 black;*/
 }

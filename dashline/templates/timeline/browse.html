@@ -8,9 +8,9 @@
     <h1>Browse Timelines</h1>
     
     <ul>
-    {% autopaginate timelines 4 %}
+    {% autopaginate timelines 10 %}
 	{% for timeline in timelines %}
-		<li><a href='{% url timeline_show timeline.slug %}'>{{ timeline }}</a><br/>
+		<li><a href='{% url timeline_show timeline.slug %}'>{{ timeline.owner}}'s {{ timeline.title }}</a><br/>
 			<p>{{ timeline.description|linebreaksbr }}</p></li>
 	{% endfor %}
 	{% paginate %}
