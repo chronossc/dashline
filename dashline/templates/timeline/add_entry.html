@@ -20,11 +20,11 @@
 	<script type="text/javascript">
     $(function() {
 
-		$('input[id*=when]').live('focus', function(){ $(this).datepicker(
-							changeMonth: true,
-							changeYear: true
-
-			)});
+		$('input[id*=when]').live('focus', function(){ 
+					$(this).datepicker({
+			changeMonth: true,
+			changeYear: true
+		});});
 		
 		$("#accordion").accordion();
 
