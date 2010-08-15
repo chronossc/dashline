@@ -9,6 +9,7 @@ TEMPLATE_DEBUG = DEBUG
 PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 
 sys.path.insert(0, os.path.join(PROJECT_DIR, 'apps'))
+sys.path.insert(0, os.path.join(PROJECT_DIR, 'external_apps'))
 
 ADMINS = (
     ('diofeher', 'diofeher@gmail.com'),
