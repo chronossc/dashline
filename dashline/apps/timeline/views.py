@@ -8,8 +8,15 @@ from django.core.urlresolvers import reverse
 from forms import TimeLineForm
 from django.forms.models import inlineformset_factory
 
-def show_timeline(request, slug):
-    """ View that returns a timeline or a 404 error if the timeline cannot be found """
+def show_timeline(request, slug=None):
+    """ 
+    View that returns a timeline based on slug (or a 404 if slug doesn't
+    exists) or if no slug redirect to default user timeline.
+    """
+    if not slug and request.user.is_authenticated():
+        t = get_object_or_404(TimeLine, default_timeline=True,
+            owner=request.user)
+        return HttpResponseRedirect(reverse('timeline_show', args=[t.slug])) 
     timeline = get_object_or_404(TimeLine, slug=slug)
     return render_to_response('timeline/show.html', {'timeline': timeline}, context_instance=RequestContext(request))
 
@@ -39,7 +46,7 @@ def create_timeline(request):
             curr = form.save(commit=False)
             curr.owner = request.user
             curr.save()
-            return HttpResponseRedirect(reverse('timeline_add_entries', args=[curr.slug]))                                        
+            return HttpResponseRedirect(reverse('timeline_add_entries', args=[curr.slug])) 
         
     return render_to_response('timeline/create.html', {'form': form}, context_instance=RequestContext(request))
 

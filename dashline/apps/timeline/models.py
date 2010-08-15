@@ -24,6 +24,7 @@ class TimeLine(models.Model):
     date_created = models.DateTimeField(_("Date created"), auto_now=True, auto_now_add=True)
     slug = models.SlugField(unique=True)
     default_ordering = models.CharField(_("Default ordering"), choices=ORDERING_CHOICES, max_length=2)
+    default_timeline = models.BooleanField(default=False,blank=True)
 
     class Meta:
         ordering = ('date_created', 'title')
