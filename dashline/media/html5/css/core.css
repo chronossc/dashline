@@ -169,6 +169,13 @@ p{
 	display:inline;
 }
 
+.article ul li a {
+	color: black;
+	font-size: 1.25em;
+	padding: 5px 5px 5px 5px;
+	margin: 2px 2px 2px 2px;
+}
+
 .nav ul li a,
 .nav ul li a:visited{
 	color:#565656;
