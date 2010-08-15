@@ -26,8 +26,9 @@ def user_post_save(**kwargs):
     if instance.timelines.count() == 0:
         t = instance.timelines.create(
             owner = instance.id,
-            title = _('%s timeline') % instance.username,
-            description  = _('This is your first timeline :)')
+            title = _('%s playground') % instance.username,
+            description  = _('This is your first timeline :). You can use as'\
+                ' playground, or as your default timeline.')
         )
         t.save()
 
