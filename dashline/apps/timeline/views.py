@@ -53,7 +53,7 @@ def add_entries(request, slug):
 
     # if this form has been submitted..
     if request.method == 'POST':            
-            formset = AddEntryFormset(request.POST, request.FILES, instance=timeline)
+            formset = AddEntryFormset(request.POST, request.FILES, instance=timeline, prefix='timeline')
             if formset.is_valid():
                 formset.save()
                 messages.add_message(request, messages.SUCCESS, 'Timeline created successfuly.')
