@@ -53,10 +53,10 @@
 									{% if form.instance.pk %}{{ form.DELETE }}{% endif %}
 									{{ form.title }}
 								</td>
-								<td>{{ form.type }}</td>
-								<td>{{ form.date }}</td>
+								<td>{{ form.entry_type }}</td>
+								<td>{{ form.when }}</td>
 								<td>{{ form.description }}</td>
-								<td>{{ form.content}}</td>
+								<td>{{ form.entry_content }}</td>
 							</tr>
 							{% endfor %}
 						</tbody>
