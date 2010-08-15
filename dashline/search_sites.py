@@ -18,6 +18,9 @@ class TimeLineIndex(SearchIndex):
 class UserProfileIndex(SearchIndex):
     text = CharField(document=True, use_template=True)
     user = CharField(model_attr='user')
+    username = CharField(model_attr='user.name')
+    twitter = CharField(model_attr='twitter')
+    description = CharField(model_attr='description')
     
 
 

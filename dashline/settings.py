@@ -121,6 +121,7 @@ INSTALLED_APPS = (
     'registration',
     'profiles',
     'pagination',
+    'haystack',
 )
 
 ACCOUNT_ACTIVATION_DAYS = 7
