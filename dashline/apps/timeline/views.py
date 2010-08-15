@@ -49,7 +49,7 @@ def add_entries(request, slug):
     """ First way to add entries do a timeline """
     timeline = get_object_or_404(TimeLine, slug=slug, owner=request.user)
     
-    AddEntryFormset = inlineformset_factory(TimeLine, Entry, extra=0, can_delete=True)
+    AddEntryFormset = inlineformset_factory(TimeLine, Entry, extra=3)
 
     # if this form has been submitted..
     if request.method == 'POST':            
@@ -61,7 +61,7 @@ def add_entries(request, slug):
         
     #if it's a fresh form
     else:
-        new_entry = AddEntryFormset(prefix='timeline', instance=timeline, can_delete=True)
+        new_entry = AddEntryFormset(prefix='timeline', instance=timeline)
     
     # return the rendered template
     return render_to_response('timeline/add_entry.html', {'formset':new_entry}, context_instance=RequestContext(request))
