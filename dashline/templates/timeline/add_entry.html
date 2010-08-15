@@ -4,13 +4,16 @@
 
 {% block extrajs %} 
 	<script type="text/javascript" src="{{MEDIA_URL}}/js/jquery.formset.min.js"></script>
+	<script type="text/javascript" src="{{MEDIA_URL}}/js/jquery.elastic.js"></script>
+
 	
 	<link rel="stylesheet" type="text/css" href="http://jquery-ui.googlecode.com/svn/tags/latest/themes/base/jquery-ui.css" media="all" />
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 
 	<script type="text/javascript">
 		$(function() {
-			$('#accordion div').formset({
+			$('#accordion fieldset').formset({
 				prefix: 'timeline'
 			});
 		})
@@ -25,6 +28,8 @@
 			changeMonth: true,
 			changeYear: true
 		});});
+		
+		$('textarea').live('focus', function(){ $('#myTextarea').elastic(); });
 		
     });
 	</script>
@@ -51,8 +56,9 @@
 						
 						<div id="accordion">
 							{% for form in formset.forms %}
-								<div id="{{ form.prefix }}-row">
-								<h3><a href="#">New Event</a></h3>
+							
+								<fieldset id="{{ form.prefix }}-row">
+								<legend>New Event</legend>
 									{% for fld in form.hidden_fields %}{{ fld }}{% endfor %}
 									{% if form.instance.pk %}{{ form.DELETE }}{% endif %}
 									
@@ -60,7 +66,7 @@
 									<p>{{ form.when }}</p>
 									<p>{{ form.description }}</p>
 									<p>{{ form.entry_type }}<br/>{{ form.entry_content }}</p>
-								</div>
+								</fieldset>
 							{% endfor %}
 						</div>
 						
