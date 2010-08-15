@@ -3,8 +3,8 @@
 {% block title %}{{ profile.user.username }}'s profile{% endblock %}
 
 {% block content %}
-<h1>{{ profile.user.username }}</h1>
-{{ profile.avatar|safe }}
+<h1>{{ profile.avatar|safe }} {{ profile.user.username }}</h1>
+
 
 {% if user != profile.user %}
     {% if profile.user in user.followers_set.all %}
