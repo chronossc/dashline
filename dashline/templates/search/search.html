@@ -17,8 +17,8 @@
         </table>
         {% if query %}
             <h3>Results</h3>
-            {% autopaginate object_list 10 %}
-            {% for result in object_list %}
+            {% autopaginate page.object_list 10 %}
+            {% for result in page.object_list %}
                 <p>
                     <a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a>
                 </p>
