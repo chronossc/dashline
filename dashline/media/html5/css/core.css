@@ -170,7 +170,8 @@ p{
 }
 
 .article ul li a {
-	font-size: 1.25em;
+	font-size: 2.25em;
+	font-weight: bold;
 }
 
 .article ul li p {
