@@ -131,7 +131,11 @@ LOGIN_REDIRECT_URL = '/profiles/'
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
+# Search stuff
+HAYSTACK_SEARCH_ENGINE = 'whoosh'
+HAYSTACK_SITECONF = 'dashline.search_sites'
 
+#Settings local
 try:
     execfile(os.path.join(PROJECT_DIR, 'settings_local.py'), globals(), locals())
 except IOError:
