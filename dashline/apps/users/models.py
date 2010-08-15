@@ -37,7 +37,7 @@ class UserProfile(models.Model):
 signals.post_save.connect(users_signals.user_post_save,User)
 
 
-class Friendship(models.Model):
+class Follow(models.Model):
   from_user = models.ForeignKey(User, related_name='user_set')
   to_user = models.ForeignKey(User, related_name='to_user_set')
   
