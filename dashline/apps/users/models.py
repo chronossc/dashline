@@ -10,12 +10,27 @@ from apps.utils import fields
 from django.utils.translation import ugettext as _
 from django.core.urlresolvers import reverse
 
+
+class Follow(models.Model):
+  from_user = models.ForeignKey(User, related_name='user_set')
+  to_user = models.ForeignKey(User, related_name='to_user_set')
+  
+  def __unicode__(self):
+    return u'%s, %s' % (self.from_user.username, self.to_user.username)
+  
+  class Meta:
+    unique_together = (('to_user', 'from_user'), )
+
+
 class UserProfile(models.Model):
     user = models.ForeignKey(User, unique=True)
     country = fields.CountryField(_('Country'))
     description = models.TextField(_('Description'), blank=True)
     twitter = models.URLField(blank=True)
-    friends = models.ManyToManyField('UserProfile', verbose_name=_('Friends'), editable=False)
+    
+    @property
+    def following(self):
+        return Follow.objects.filter(from_user=self.user)
     
     @property
     def avatar(self):
@@ -37,12 +52,3 @@ class UserProfile(models.Model):
 signals.post_save.connect(users_signals.user_post_save,User)
 
 
-class Follow(models.Model):
-  from_user = models.ForeignKey(User, related_name='user_set')
-  to_user = models.ForeignKey(User, related_name='to_user_set')
-  
-  def __unicode__(self):
-    return u'%s, %s' % (self.from_user.username, self.to_user.username)
-  
-  class Meta:
-    unique_together = (('to_user', 'from_user'), )
