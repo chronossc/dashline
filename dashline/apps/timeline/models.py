@@ -25,30 +25,31 @@ class TimeLine(models.Model):
     date_created = models.DateTimeField(_("Date created"), auto_now=True, auto_now_add=True)
     slug = models.SlugField(unique=True)
     default_ordering = models.CharField(_("Default ordering"), choices=ORDERING_CHOICES, max_length=2)
-    
+    default_timeline = models.BooleanField(default=False,blank=True)
+
     class Meta:
         ordering = ('date_created', 'title')
-    
+
     def __unicode__(self):
         return "(%s) %s - %s" % (self.owner.username, self.title, self.date_created)
-    
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         counter = 1
-        
+
         while True:
             try:
                 tl = TimeLine.objects.get(slug=self.slug)
                 if tl == self:
                     super(TimeLine, self).save(*args, **kwargs)
                     break
-                
+
                 self.slug += str(counter)
                 counter += 1
             except TimeLine.DoesNotExist:
                 super(TimeLine, self).save(*args, **kwargs)
                 break
-    
+
     def get_absolute_url(self):
         return reverse('timeline.views.show_timeline', args=[self.slug])
 
