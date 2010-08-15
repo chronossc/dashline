@@ -25,3 +25,15 @@ def users_follow(request, *args, **kwargs):
     except IntegrityError:
         messages.info(request, 'You are already following %s' % friend.username)
     return HttpResponseRedirect(reverse('profiles_profile_detail', args=[friend.username]))
+
+@login_required
+def users_unfollow(request, *args, **kwargs):
+    try:
+        username = kwargs.get('slug', '')
+        friend = get_object_or_404(User, username=username)
+        follow = Follow.objects.get(from_user=request.user, to_user=friend)
+        follow.delete()
+        messages.info(request, 'You are not following %s anymore' % friend.username)
+    except IntegrityError:
+        messages.error(request, 'You are not following %s' % friend.username)
+    return HttpResponseRedirect(reverse('profiles_profile_detail', args=[friend.username]))
