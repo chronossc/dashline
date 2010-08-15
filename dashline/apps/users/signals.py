@@ -28,7 +28,8 @@ def user_post_save(**kwargs):
             owner = instance.id,
             title = _('%s playground') % instance.username,
             description  = _('This is your first timeline :). You can use as'\
-                ' playground, or as your default timeline.')
+                ' playground, or as your default timeline.'),
+            default_timeline=True
         )
         t.save()
 
