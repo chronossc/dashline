@@ -23,15 +23,26 @@ class UserProfile(models.Model):
         email = self.user.email
         default = "http://www.wprecipes.com/wp-content/uploads/2009/01/gravatar1.jpg"
         url = "http://www.gravatar.com/avatar.php?%s" % urllib.urlencode({
-                                                                        'gravatar_id': hashlib.md5(email).hexdigest(), 
-                                                                        'default': default, 
+                                                                        'gravatar_id': hashlib.md5(email).hexdigest(),
+                                                                        'default': default,
                                                                         'size': str(size) })
         return '<img width="%s" src="%s" alt="%s"></img>' % (size, url, size)
-
+    
     def __unicode__(self):
         return self.user.username
-
+    
     def get_absolute_url(self):
         return reverse('profiles_profile_detail', args=[self.user.username])
 
 signals.post_save.connect(users_signals.user_post_save,User)
+
+
+class Friendship(models.Model):
+  from_friend = models.ForeignKey(User, related_name='friend_set')
+  to_friend = models.ForeignKey(User, related_name='to_friend_set')
+  
+  def __unicode__(self):
+    return u'%s, %s' % (self.from_friend.username, self.to_friend.username)
+  
+  class Meta:
+    unique_together = (('to_friend', 'from_friend'), )
