@@ -23,9 +23,15 @@
 	
 	<script type="text/javascript">
     $(function() {
-        $('input[id*=when]').datepicker();
+
+		$('input[id*=when]').live('focus', function(){ $(this).datepicker(
+							changeMonth: true,
+							changeYear: true
+
+			)});
 		
-		$('input[id*=when]').live('focus', function(){ $(this).datepicker()});
+		$("#accordion").accordion();
+
     });
 	</script>
 
@@ -48,31 +54,22 @@
 			<div class="entry">
 				<form method="post" action="{{ request.path }}">
 				{% csrf_token %}
-					<table id="id_entry" border="0" cellpadding="0" cellspacing="5">
-						<thead style='color: black;'>
-							<tr>
-								<th scope="col">Title</th>
-								<th scope="col">Date</th>
-								<th scope="col">Description</th>
-								<th scope="col">Type/Content</th>
-							</tr>
-						</thead>
 						
-						<tbody>
+						<div id="accordion">
 							{% for form in formset.forms %}
-							<tr id="{{ form.prefix }}-row">
-								<td>
-									{% for fld in form.hidden_fields %}{{ fld }}{% endfor %}
-									{% if form.instance.pk %}{{ form.DELETE }}{% endif %}
-									{{ form.title }}
-								</td>
-								<td>{{ form.when }}</td>
-								<td>{{ form.description }}</td>
-								<td>{{ form.entry_type }}<br/>{{ form.entry_content }}</td>
-							</tr>
+							<h3><a href="#">New Event</a></h3>
+							<div id="{{ form.prefix }}-row">
+								{% for fld in form.hidden_fields %}{{ fld }}{% endfor %}
+								{% if form.instance.pk %}{{ form.DELETE }}{% endif %}
+								
+								<p>{{ form.title }}</p>
+								<p>{{ form.when }}</p>
+								<p>{{ form.description }}</p>
+								<p>{{ form.entry_type }}<br/>{{ form.entry_content }}</p>
+							</div>
 							{% endfor %}
-						</tbody>
-					</table>
+						</div>
+						
 					<p>
 						{{ formset.management_form }}
 						<input type="submit" value="Submit" />
