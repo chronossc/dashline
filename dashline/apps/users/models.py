@@ -38,11 +38,11 @@ signals.post_save.connect(users_signals.user_post_save,User)
 
 
 class Friendship(models.Model):
-  from_friend = models.ForeignKey(User, related_name='friend_set')
-  to_friend = models.ForeignKey(User, related_name='to_friend_set')
+  from_user = models.ForeignKey(User, related_name='user_set')
+  to_user = models.ForeignKey(User, related_name='to_user_set')
   
   def __unicode__(self):
-    return u'%s, %s' % (self.from_friend.username, self.to_friend.username)
+    return u'%s, %s' % (self.from_user.username, self.to_user.username)
   
   class Meta:
-    unique_together = (('to_friend', 'from_friend'), )
+    unique_together = (('to_user', 'from_user'), )

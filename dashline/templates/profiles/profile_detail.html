@@ -7,7 +7,7 @@
 {{ profile.avatar|safe }}
 
 {% if user != profile.user %}
-    <a href="{% url users_add profile.user %}">{{ _('add as friend') }}</a>
+    <a href="{% url users_follow profile.user %}">{{ _('follow') }}</a>
 {% endif %}
 
 {% if profile.description %}about: {{ profile.description }}{% endif %}
