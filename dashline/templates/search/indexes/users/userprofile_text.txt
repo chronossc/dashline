@@ -1,0 +1,7 @@
+{{ object.country }}
+{{ object.user }}
+{{ object.description }}
+{{ object.twitter }}
+{{ object.user.username }}
+{{ object.user.get_full_name }}
+{{ object.user.email }}
