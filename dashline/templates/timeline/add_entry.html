@@ -10,7 +10,7 @@
 
 	<script type="text/javascript">
 		$(function() {
-			$('#accordion div').formset({
+			$('#accordion fieldset').formset({
 				prefix: 'timeline'
 			});
 		})
@@ -51,8 +51,9 @@
 						
 						<div id="accordion">
 							{% for form in formset.forms %}
-								<div id="{{ form.prefix }}-row">
-								<h3><a href="#">New Event</a></h3>
+							
+								<fieldset id="{{ form.prefix }}-row">
+								<a href="#">New Event</a><br/>
 									{% for fld in form.hidden_fields %}{{ fld }}{% endfor %}
 									{% if form.instance.pk %}{{ form.DELETE }}{% endif %}
 									
@@ -60,7 +61,7 @@
 									<p>{{ form.when }}</p>
 									<p>{{ form.description }}</p>
 									<p>{{ form.entry_type }}<br/>{{ form.entry_content }}</p>
-								</div>
+								</fieldset>
 							{% endfor %}
 						</div>
 						
