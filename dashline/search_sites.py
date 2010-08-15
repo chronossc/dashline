@@ -11,7 +11,8 @@ from users.models import UserProfile
 class TimeLineIndex(SearchIndex):
     text = CharField(document=True, use_template=True)
     author = CharField(model_attr='user')
-    
+    title = CharField(model_attr='title')
+    description = CharField(model_attr='description')
 
 
 class UserProfileIndex(SearchIndex):
