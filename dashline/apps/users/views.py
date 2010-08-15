@@ -2,10 +2,17 @@ from django.http import Http404, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.shortcuts import render_to_response, get_object_or_404
-from django.core.urlresolvers import reverse
 from models import Follow
 from django.contrib.auth.models import User
 from django.db import IntegrityError
+from django.contrib.auth.models import User
+from django.core.exceptions import ObjectDoesNotExist
+from django.core.urlresolvers import reverse
+from django.template import RequestContext
+from django.views.generic.list_detail import object_list
+
+from profiles import utils
+
 
 @login_required
 def users_follow(request, *args, **kwargs):
@@ -18,4 +25,3 @@ def users_follow(request, *args, **kwargs):
     except IntegrityError:
         messages.info(request, 'You are already following %s' % friend.username)
     return HttpResponseRedirect(reverse('profiles_profile_detail', args=[friend.username]))
-
