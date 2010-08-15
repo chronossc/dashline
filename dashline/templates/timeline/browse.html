@@ -10,7 +10,7 @@
     <ul>
     {% autopaginate timelines 4 %}
 	{% for timeline in timelines %}
-		<li>{{ timeline }}</li>
+		<li><a href='{% url timeline_show timeline.slug %}'>{{ timeline }}</a></li>
 	{% endfor %}
 	{% paginate %}
 	</ul>
