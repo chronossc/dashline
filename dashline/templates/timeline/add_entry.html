@@ -2,25 +2,72 @@
 
 {% block Title %}Add entries to your timeline{% endblock %}
 
+{% block extrajs %} 
+	<script type="text/javascript" src="{{MEDIA_URL}}/js/jquery.formset.min.js"></script>
+	
+	<script type="text/javascript">
+		$(function() {
+			$('#id_entry tbody tr').formset({
+				// For inline formsets, be sure to set the prefix, as the default prefix
+				// ('form') isn't correct.
+				// Django appears to generate the prefix from the lowercase plural
+				// name of the related model, with camel-case converted to underscores.
+				prefix: 'timeline'
+			})
+		})
+	</script>
+	<style type="text/css">
+		.delete-row {
+			margin-left:5px;
+		}
+	</style>
+	   
+{% endblock %}
+ 
 {% block content %}
 		<h2>Add entries to your timeline</h2>
 		
 		<p>Fill this form to create a new timeline.</p>
+			
 		
-		<form method='post' action='{{request.path}}'>{% csrf_token %}
-		  <fieldset>
-			<legend>Event entry</legend>
-			{{ timeline.management_form }}
-			{% for form in timeline.forms %}
-			  <div>{{form.as_p}}</div>
-			{% endfor %}
-			<input title='Add a new entry to the timeline'
-			  type='submit' name='add_entry' value='Add' />
-		  </fieldset>
-		  
-		  <input title='Submit this form'
-			  type='submit' name='submit' value='Submit' />
-		</form>
+		<div>
+			<div class="entry">
+				<form method="post" action="{{ request.path }}">
+				{% csrf_token %}
+					<table id="id_entry" border="0" cellpadding="0" cellspacing="5">
+						<thead>
+							<tr>
+								<th scope="col">Title</th>
+								<th scope="col">Type</th>
+								<th scope="col">Date</th>
+								<th scope="col">Description</th>
+								<th scope="col">Content</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							{% for form in formset.forms %}
+							<tr id="{{ form.prefix }}-row">
+								<td>
+									{% for fld in form.hidden_fields %}{{ fld }}{% endfor %}
+									{% if form.instance.pk %}{{ form.DELETE }}{% endif %}
+									{{ form.title }}
+								</td>
+								<td>{{ form.entry_type }}</td>
+								<td>{{ form.when }}</td>
+								<td>{{ form.description }}</td>
+								<td>{{ form.entry_content }}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					<p>
+						{{ formset.management_form }}
+						<input type="submit" value="Submit" />
+					</p>
+				</form>
+			</div>
+		</div>
 
 
 {% endblock %}
