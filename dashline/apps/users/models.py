@@ -8,6 +8,7 @@ from apps.timeline.models import TimeLine
 from apps.users import signals as users_signals
 from apps.utils import fields
 from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
 
 class UserProfile(models.Model):
     user = models.ForeignKey(User, unique=True)
@@ -28,5 +29,8 @@ class UserProfile(models.Model):
 
     def __unicode__(self):
         return self.user.username
+
+    def get_absolute_url(self):
+        return reverse('profiles_profile_detail', args=[self.user.username])
 
 signals.post_save.connect(users_signals.user_post_save,User)
