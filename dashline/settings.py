@@ -135,6 +135,8 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 HAYSTACK_SEARCH_ENGINE = 'whoosh'
 HAYSTACK_SITECONF = 'dashline.search_sites'
 
+HAYSTACK_WHOOSH_PATH = os.path.join(PROJECT_DIR, 'dashline_index')
+
 #Settings local
 try:
     execfile(os.path.join(PROJECT_DIR, 'settings_local.py'), globals(), locals())
