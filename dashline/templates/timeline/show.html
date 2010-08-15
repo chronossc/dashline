@@ -12,210 +12,34 @@
 	<h3>by <a href='{% url profiles_profile_detail timeline.owner %}'>{{ timeline.owner }}</a>, created {{ timeline.date_created|date:'d/m/Y' }}</h3>
 	<p>{{ timeline.description|linebreaksbr }}</p>
 	
-	<div id='tl-master-canvas' class='goog-app'>
-	
-		<div id='tl-interactive-canvas' style='left: 0pt;'>
-				<ul class='tl-events'>	
-						{% if timeline.default_ordering == 'Y' %}
-							{% for entry in timeline.entry_set.all %}
-								{% ifchanged entry.when|date:"Y" %}
-								
-									{% if forloop.first %}
-										<li class='first'>
-											<h3>
-												<div></div>
-												<span class='year'>{{ entry.when|date:"Y" }}</span>
-											</h3>
-											
-											<ul class='column'>	
-								
-									{% else %}
-												</ul>
-											</li>
-											
-											<li class='first'>
-											<h3>
-												<div></div>
-												<span class='year'>{{ entry.when|date:"Y" }}</span>
-											</h3>
-											
-											<ul class='column'>	
-									{% endif %}
-							
-								{% endifchanged %}
-								
-								<li class='milestone'>
-									<a href='' hidefocus=''>
-										<span class='tl-icon' title='{{ entry.entry_type }}'></span>
-										<span class='tl-msg'>
-											<span class='tl-msg-inside'>{{ entry.title }}</span>
-										</span>
-									</a>
-								</li>
-								
-								
-								{% if forloop.last %}
-									</ul>
-								</li>
-								{% endif %}
-								
-							{% endfor %}
-				</ul>
-					
-			<div id='tl-nav'>
-				<p><</p>
-					<div class='canvas'>
-						<ul id='tl-nav-list'>
-							{% for entry in timeline.entry_set.all %}
-								{% ifchanged entry.when|date:"Y" %}
-									<li><a href='#{{ entry.when|date:"y" }}'>{{ entry.when|date:"y" }}</a></li>
-								{% endifchanged %}
-							{% endfor %}
-						</ul>
-					</div>
-					
-				<p>><p>
-			</div>
-			
-		</div>
-	</div>
+		
+	<ul class='text-timeline'>
+		{% for entry in timeline.entry_set.all %}
+			{% if not forloop.first %}
+				</ul></li>
 			{% endif %}
-			
-			
-						{% if timeline.default_ordering == 'M' %}
-							{% for entry in timeline.entry_set.all %}
-								{% ifchanged entry.when|date:"m/Y" %}
-								
-									{% if forloop.first %}
-										<li class='first'>
-											<h3>
-												<div></div>
-												<span class='year'>{{ entry.when|date:"m/Y" }}</span>
-											</h3>
-											
-											<ul class='column'>	
-								
-									{% else %}
-												</ul>
-											</li>
-											
-											<li class='first'>
-											<h3>
-												<div></div>
-												<span class='year'>{{ entry.when|date:"m/Y" }}</span>
-											</h3>
-											
-											<ul class='column'>	
-									{% endif %}
-							
-								{% endifchanged %}
-								
-								<li class='milestone'>
-									<a href='' hidefocus=''>
-										<span class='tl-icon' title='{{ entry.entry_type }}'></span>
-										<span class='tl-msg'>
-											<span class='tl-msg-inside'>{{ entry.title }}</span>
-										</span>
-									</a>
-								</li>
-								
-								
-								{% if forloop.last %}
-									</ul>
-								</li>
-								{% endif %}
-								
-							{% endfor %}
-				</ul>
-					
-			<div id='tl-nav'>
-				<p><</p>
-					<div class='canvas'>
-						<ul id='tl-nav-list'>
-							{% for entry in timeline.entry_set.all %}
-								{% ifchanged entry.when|date:"m/Y" %}
-									<li><a href='#{{ entry.when|date:"m/Y" }}'>{{ entry.when|date:"m/Y" }}</a></li>
-								{% endifchanged %}
-							{% endfor %}
-						</ul>
-					</div>
-					
-				<p>><p>
-			</div>
-			
-		</div>
-	</div>
+				
+			{% ifchanged entry.when|date:"Y" %}
+				<li class='{{ entry.when|date:"Y" }}'> <h2>{{ entry.when|date:"Y" }}</h2><ul>
 			{% endif %}
-			
-			
-							{% if timeline.default_ordering == 'D' %}
-							{% for entry in timeline.entry_set.all %}
-								{% ifchanged entry.when|date:"d/m/Y" %}
-								
-									{% if forloop.first %}
-										<li class='first'>
-											<h3>
-												<div></div>
-												<span class='year'>{{ entry.when|date:"d/m/Y" }}</span>
-											</h3>
-											
-											<ul class='column'>	
-								
-									{% else %}
-												</ul>
-											</li>
-											
-											<li class='first'>
-											<h3>
-												<div></div>
-												<span class='day'>{{ entry.when|date:"d/m/Y" }}</span>
-											</h3>
-											
-											<ul class='column'>	
-									{% endif %}
-							
-								{% endifchanged %}
-								
-								<li class='milestone'>
-									<a href='' hidefocus=''>
-										<span class='tl-icon' title='{{ entry.entry_type }}'></span>
-										<span class='tl-msg'>
-											<span class='tl-msg-inside'>{{ entry.title }}</span>
-										</span>
-									</a>
-								</li>
-								
-								
-								{% if forloop.last %}
-									</ul>
-								</li>
-								{% endif %}
-								
-							{% endfor %}
-				</ul>
-					
-			<div id='tl-nav'>
-				<p><</p>
-					<div class='canvas'>
-						<ul id='tl-nav-list'>
-							{% for entry in timeline.entry_set.all %}
-								{% ifchanged entry.when|date:"Y" %}
-									<li><a href='#{{ entry.when|date:"d/m/Y" }}'>{{ entry.when|date:"Y" }}</a></li>
-								{% endifchanged %}
-							{% endfor %}
-						</ul>
-					</div>
-					
-				<p>><p>
-			</div>
-			
-		</div>
-	</div>
+				
+			{% ifchanged entry.when|date:"m/Y" %}
+				<li class='{{ entry.when|date:"m_Y" }}'> <h2>{{ entry.when|date:"m/Y" }}</h2><ul>
 			{% endif %}
-			
-			
-			
-
+				
+			{% ifchanged entry.when|date:"d/m/Y" %}
+				<li class='{{ entry.when|date:"d_m_Y" }}'> <h2>{{ entry.when|date:"d/m/Y" }}</h2><ul>
+			{% endif %}
+				
+			<li class='entry'>
+				<p>
+					{{ entry.entry_type}} - {{ entry.title }}<br/>
+					{{ entry.description|linebreaksbr }}
+				</p>
+			</li>
+		{% endfor %}
 	</ul>
+	
+
 	
 {% endblock %}

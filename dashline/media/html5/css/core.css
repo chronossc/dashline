@@ -170,10 +170,11 @@ p{
 }
 
 .article ul li a {
-	color: black;
 	font-size: 1.25em;
-	padding: 5px 5px 5px 5px;
-	margin: 2px 2px 2px 2px;
+}
+
+.article ul li p {
+	padding-left: 15px;
 }
 
 .nav ul li a,
