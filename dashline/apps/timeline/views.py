@@ -8,6 +8,18 @@ from django.core.urlresolvers import reverse
 from forms import TimeLineForm
 from django.forms.models import inlineformset_factory
 
+def home_timeline(request):
+    """
+    Show user timeline(s)
+    """
+    t=[]
+    if request.user.is_authenticated:
+        t = request.user.timelines.all()
+    return render_to_response('timeline/home.html',
+        {'timelines':t},
+        context_instance=RequestContext(request))
+
+
 def show_timeline(request, slug=None):
     """ 
     View that returns a timeline based on slug (or a 404 if slug doesn't

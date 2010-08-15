@@ -16,7 +16,10 @@
    version="1.1"
    inkscape:version="0.47 r22583"
    sodipodi:docname="concept.svg"
-   style="enable-background:new">
+   style="enable-background:new"
+   inkscape:export-filename="/home/felipe/projects/dashline-repo/artwork/concept.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <inkscape:perspective
@@ -304,7 +307,7 @@
      inkscape:cx="624.93112"
      inkscape:cy="710.99318"
      inkscape:document-units="px"
-     inkscape:current-layer="svg2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
      inkscape:window-height="831"
