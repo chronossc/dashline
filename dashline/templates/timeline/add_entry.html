@@ -23,9 +23,12 @@
 	
 	<script type="text/javascript">
     $(function() {
-        $('input[id*=when]').datepicker();
-		
-		$('input[id*=when]').live('focus', function(){ $(this).datepicker()});
+
+		$('input[id*=when]').live('focus', function(){ $(this).datepicker(
+							changeMonth: true,
+							changeYear: true
+
+			)});
     });
 	</script>
 
