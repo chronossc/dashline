@@ -12,6 +12,7 @@ urlpatterns = patterns('',
         'show_indexes': True}),
     
     (r'^profiles/', include('profiles.urls')),
+    (r'^users/', include('users.urls')),
     (r'^accounts/', include('registration.backends.default.urls')),
     (r'^timeline/', include('timeline.urls')),
     (r'^search/', include('haystack.urls')),
