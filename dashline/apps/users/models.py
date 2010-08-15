@@ -12,8 +12,8 @@ from django.core.urlresolvers import reverse
 
 
 class Follow(models.Model):
-  from_user = models.ForeignKey(User, related_name='user_set')
-  to_user = models.ForeignKey(User, related_name='to_user_set')
+  from_user = models.ForeignKey(User, related_name='following_set')
+  to_user = models.ForeignKey(User, related_name='followers_set')
   
   def __unicode__(self):
     return u'%s, %s' % (self.from_user.username, self.to_user.username)
@@ -27,14 +27,7 @@ class UserProfile(models.Model):
     country = fields.CountryField(_('Country'))
     description = models.TextField(_('Description'), blank=True)
     twitter = models.URLField(blank=True)
-    
-    def is_following(self, user):
-        return Follow.objects.filter(from_user=self.user, to_user=user)
-    
-    @property
-    def following(self):
-        return Follow.objects.filter(from_user=self.user)
-    
+
     @property
     def avatar(self):
         size = 48
