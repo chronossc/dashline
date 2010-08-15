@@ -12,10 +12,11 @@ from django.core.urlresolvers import reverse
 
 class UserProfile(models.Model):
     user = models.ForeignKey(User, unique=True)
-    country = fields.CountryField()
+    country = fields.CountryField(_('Country'))
     description = models.TextField(_('Description'), blank=True)
     twitter = models.URLField(blank=True)
-
+    friends = models.ManyToManyField('UserProfile', verbose_name=_('Friends'), editable=False)
+    
     @property
     def avatar(self):
         size = 48

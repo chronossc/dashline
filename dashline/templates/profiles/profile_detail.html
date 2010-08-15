@@ -11,4 +11,10 @@
 <ul>
     {% if profile.twitter %}<li>Twitter: {{ profile.twitter }}</li>{% endif %}
 </ul>
+
+{% for friend in profile.friends.all %}
+    <a href="{% url profiles_profile_detail friend.user.username %}">{{ friend }}</a>
+{% empty %}
+    <p>No friends yet.</p>
+{% endfor %}
 {% endblock %}
