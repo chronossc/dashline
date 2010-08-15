@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
+from django.core.urlresolvers import reverse
 
 TYPE_CHOICES = (
     ('URL', _('Link to another site')),
@@ -49,6 +50,10 @@ class TimeLine(models.Model):
                 super(TimeLine, self).save(*args, **kwargs)
                 break
 
+    def get_absolute_url(self):
+        return reverse('timeline.views.show_timeline', args=[self.slug])
+
+
 
 class Entry(models.Model):
     """Represents one entry inside a timeline."""
@@ -62,6 +67,6 @@ class Entry(models.Model):
     
     class Meta:
         ordering = ('when', 'title')
-        
+    
     def __unicode__(self):
         return "(%s) %s - %s" % (self.timeline, self.title, self.when)

@@ -11,17 +11,17 @@ def user_post_save(**kwargs):
     """
     # import here to avoid cross import issues
     from apps.users.models import UserProfile
-
+    
     instance = kwargs.pop('instance')
     created = kwargs.pop('created')
-
+    
     # add user profile if not exists
     try:
         profile = instance.userprofile_set.get()
     except UserProfile.DoesNotExist:
         profile = instance.userprofile_set.create(user=instance.id)
         profile.save()
-
+    
     # add a default timeline if not exists
     if instance.timelines.count() == 0:
         t = instance.timelines.create(

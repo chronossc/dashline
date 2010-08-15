@@ -67,8 +67,7 @@ def add_entries(request, slug):
                 return HttpResponseRedirect(reverse('timeline_show', args=[timeline.slug]))
         
     #if it's a fresh form
-    else:
-        new_entry = AddEntryFormset(prefix='timeline', instance=timeline)
+    new_entry = AddEntryFormset(prefix='timeline', instance=timeline)
     
     # return the rendered template
     return render_to_response('timeline/add_entry.html', {'formset':new_entry}, context_instance=RequestContext(request))
