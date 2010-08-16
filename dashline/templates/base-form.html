@@ -1,6 +1,20 @@
 {% load i18n %}
+{% if form.non_field_errors %}
+<ul class="errors">
+    {% for error in form.non_field_errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
 {% for field in form %}
 <div class="form-row">
+    {% if field.errors %}
+    <ul class="errors">
+        {% for error in field.errors %}
+        <li>{{ error }}
+        {% endfor %}
+    </ul>
+    {% endif %}
     <div class="field">
         <label for="{{ field.html_name }}" {{ field.row_attrs }}>{{ field.label }}:</label>
         {{ field }}
