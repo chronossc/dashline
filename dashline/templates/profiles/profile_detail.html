@@ -33,7 +33,7 @@
 
 <h3> Timelines <h3>
 	<ul>
-{% for timeline in profile.user.timeline_set.all %}
+{% for timeline in profile.user.timelines.all %}
 		<li><a href='{% url timeline_show timeline.slug %}'>{{ timeline.title }}</a></li>
 {% endfor %}
 	</ul>
