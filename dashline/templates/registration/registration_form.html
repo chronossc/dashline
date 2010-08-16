@@ -6,7 +6,7 @@
 <h1>Create an account</h1>
 
 <form method="post" action=".">{% csrf_token %}
-    {{ form.as_p }}
+    {% include 'base-form.html' %}
     <p><input type="submit"></p>
 </form>
 {% endblock %}
