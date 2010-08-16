@@ -12,6 +12,9 @@
 	<h3>by <a href='{% url profiles_profile_detail timeline.owner %}'>{{ timeline.owner }}</a>, created {{ timeline.date_created|date:'d/m/Y' }}</h3>
 	<p>{{ timeline.description|linebreaksbr }}</p>
 	
+	{% if user == timeline.owner %}
+	<a href="{% url timeline_add_entries timeline.slug %}">{{ _('create new entry') }}</a>
+	{% endif %}
 		
 	<ul class='text-timeline'>
 		{% for entry in timeline.entry_set.all %}
