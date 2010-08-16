@@ -21,7 +21,7 @@
 </tr>
 </table-->
 
-	{{ form.as_p }}
+	{% include 'base-form.html' %}
 	<p><input type="submit" value="login" /></p>
 <input type="hidden" name="next" value="{{ next }}" />
 </form>

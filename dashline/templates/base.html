@@ -59,6 +59,7 @@
 	<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.checkbox.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
+	        $("form input, form textarea, form select").addClass("text ui-widget-content ui-corner-all").css('padding','3px')
     	    $('input:checkbox').checkbox({empty:'{{ MEDIA_URL }}img/empty.png'});
 			$('input:radio').checkbox({empty:'{{ MEDIA_URL }}img/empty.png'});
 		});
