@@ -1,0 +1,41 @@
+.jquery-checkbox {
+    cursor: hand;
+    cursor: pointer;
+    display: inline;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.jquery-checkbox .mark {
+    display: inline;
+}
+
+.jquery-checkbox img {
+    height: 16px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.jquery-checkbox img{
+    background: transparent url(../img/tickcross-checkbox.png) no-repeat;
+}
+
+.jquery-checkbox img{
+	background-position: 0 -16px;
+}
+.jquery-checkbox-hover img{
+	background-position: -16px -16px;
+}
+.jquery-checkbox-checked img{
+	background-position: 0 0;
+}
+.jquery-checkbox-checked .jquery-checkbox-hover img {
+	background-position: -16px 0;
+}
+
+.jquery-checkbox-disabled img{
+	background-position: -16px -32px;
+}
+.jquery-checkbox-checked .jquery-checkbox-disabled img{
+	background-position: 0px -32px;
+}

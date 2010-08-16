@@ -2,13 +2,20 @@
 
 {% block title %}Create a new Timeline{% endblock %}
 
+{% block extrajs %}
+<script type='text/javascript'>
+    $(function(){
+        $("form input, form textarea, form select").addClass("text ui-widget-content ui-corner-all").css('padding','3px')
+    })
+</script>
+{% endblock %}
 {% block content %}
 		<h2>Create a new timeline</h2>
 		
 		<p>Fill this form to create a new timeline.</p>
-		
+
 		<form action='{% url timeline_create %}' method='post'>{% csrf_token %}
-			{{ form.as_p }}
+			{% include "base-form.html" %}
 			<p><input type='submit' value='Create!' /></p>
 		</form>
 		

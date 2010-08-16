@@ -1,0 +1,11 @@
+{% load i18n %}
+{% for field in form %}
+<div class="form-row">
+    <div class="field">
+        <label for="{{ field.html_name }}" {{ field.row_attrs }}>{{ field.label }}:</label>
+        {{ field }}
+    </div>
+    {% if field.help_text %}<div class="help-text">{{ field.help_text }}</div>{% endif %}
+    <div style="clear: both; height: 0"></div>
+</div>
+{% endfor %}

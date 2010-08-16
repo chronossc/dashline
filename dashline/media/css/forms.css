@@ -1,0 +1,34 @@
+/* base style for every form in site */
+article form, .article form, form {
+    width: auto;
+    text-align: left;
+}
+
+form div.form-row {
+    margin: 10px 0;
+}
+
+form div.form-row div.field {
+
+}
+
+form div.form-row div.field label {
+    color: black;
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+}
+
+form div.form-row div.field input,
+form div.form-row div.field select,
+form div.form-row div.field textarea {
+    float: left;
+}
+
+form input,
+form select,
+form textarea { }
+
+form input[type=submit],
+form input[type=buttom],
+form buttom { }

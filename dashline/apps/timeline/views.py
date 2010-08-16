@@ -50,16 +50,16 @@ def post_entry(request):
 def create_timeline(request):
     """ Creates a timeline. """
     form = TimeLineForm()
-    
+
     if request.method == 'POST':
         form = TimeLineForm(request.POST)
-        
-        if form.is_valid():          
+
+        if form.is_valid():
             curr = form.save(commit=False)
             curr.owner = request.user
             curr.save()
             return HttpResponseRedirect(reverse('timeline_add_entries', args=[curr.slug])) 
-        
+
     return render_to_response('timeline/create.html', {'form': form}, context_instance=RequestContext(request))
 
 
@@ -67,23 +67,23 @@ def create_timeline(request):
 def add_entries(request, slug):
     """ First way to add entries do a timeline """
     timeline = get_object_or_404(TimeLine, slug=slug, owner=request.user)
-    
+
     AddEntryFormset = inlineformset_factory(TimeLine, Entry, extra=3)
 
     # if this form has been submitted..
-    if request.method == 'POST':            
+    if request.method == 'POST':
             formset = AddEntryFormset(request.POST, request.FILES, instance=timeline, prefix='timeline')
             if formset.is_valid():
                 formset.save()
                 messages.add_message(request, messages.SUCCESS, 'Timeline created successfuly.')
                 return HttpResponseRedirect(reverse('timeline_show', args=[timeline.slug]))
-        
+
     #if it's a fresh form
     new_entry = AddEntryFormset(prefix='timeline', instance=timeline)
-    
+
     # return the rendered template
     return render_to_response('timeline/add_entry.html', {'formset':new_entry}, context_instance=RequestContext(request))
-    
+
 
 def get_hottest(request):
     """ Returns the most viewed/commented timelines """

@@ -44,10 +44,11 @@
 	<!--[if lt IE 8]>
 	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
 	<![endif]-->
-	
 
     <link type="text/css" href="{{ MEDIA_URL }}css/dashline/jquery-ui-1.8.4.custom.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/base.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ MEDIA_URL }}css/forms.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="{{ MEDIA_URL }}css/jquery.checkbox.css" />
     {% block extracss %}{% endblock %}
 	<!-- jQuery -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
@@ -55,6 +56,13 @@
     <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery-ui-1.8.4.custom.min.js"></script>
 	<script src="{{ MEDIA_URL }}js/functions.js"></script>
 	<script src="{{ MEDIA_URL}}html5/js/modernizr-1.5.min.js"></script>
+	<script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.checkbox.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+    	    $('input:checkbox').checkbox({empty:'{{ MEDIA_URL }}img/empty.png'});
+			$('input:radio').checkbox({empty:'{{ MEDIA_URL }}img/empty.png'});
+		});
+    </script>
 
     {% block extrajs %}{% endblock %}
 
